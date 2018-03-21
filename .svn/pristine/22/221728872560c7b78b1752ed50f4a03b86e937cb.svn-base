@@ -1,0 +1,31 @@
+[ 2017-08-30T12:00:05+08:00 ] ::1 ::1 POST /tigergame/public/admin/api/checkLoginAccess
+[ log ] localhost/tigergame/public/admin/api/checkLoginAccess [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：1,356.61kb] [文件加载：27]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '83',
+  'postman-token' => '72be141f-389a-f6c4-e1ac-e4f13c8c7f52',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\tigergame\application\admin\controller\ApiController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

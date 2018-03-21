@@ -1,0 +1,158 @@
+<div class="page-content">
+
+    <div class="page-header">
+        <h1>
+            线数线注设置
+            <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+                商户昵称：{$nickname}
+            </small>
+        </h1>
+    </div>
+
+    <div>
+
+        <div>
+            <label><h4 style="color: blue;">线数修改</h4></label>
+        </div>
+        线数：<input type="text" name="merchantId" id="mid" value="{$xs}" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" />
+        <button type="button" class="btn btn-default" id="btn1">确定修改</button>
+        <input type="hidden" name="uid"  id="uid" value="{$uid}"/>
+        <span class="help-block" id="info"></span>
+
+    </div>
+    <div style="margin-top: 20px;"></div>
+    <hr/>
+    <div>
+        <div>
+            <label><h4 style="color: blue;font-weight: bold;">线注修改：</h4></label>
+        </div>
+        <div>
+
+            <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox1" value="option1"> 选项 1
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox2" value="option2"> 选项 2
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox3" value="option3"> 选项 3
+            </label>
+
+        </div>
+        <div style="margin-top: 10px;">
+            <button type="button" class="btn btn-default" id="btn2">确定修改</button>
+            <span class="help-block" id="message"></span>
+        </div>
+
+    </div>
+    <div style="margin-top: 20px;"></div>
+    <hr/>
+
+
+
+</div>
+<!--[if !IE]> -->
+<script src="__ROOT__/static/ace1.4/assets/js/jquery-2.1.4.min.js"></script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script src="/static/ace1.4/assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+<script>
+
+    //玩家查询
+    $(document).ready(function(){
+        $("#btn1").on("click",function(){
+           var  username=$("#user1").val();
+           var  merchantId=$("#mid").val();
+           if(!username){
+               alert('用户名为空！');
+               return false;
+           }
+            if(!merchantId){
+                alert('线路号为空！');
+                return false;
+            }
+            //在与服务器通讯较慢时给用户提示信息
+            $("#info").text("数据验证中，请稍后...");
+            //向服务器发送请求(get、post)
+            $.post("{:url('CeShi/doAction')}",
+                {
+                    username:username,
+                    merchantId:merchantId
+                },
+                function(data){
+                    if(data.code==1){
+                        $("#info").text(data.message);
+                        $("#uid").val(data.uid);
+                    }else{
+                        $("#info").text(data.message);
+                    }
+                });
+        })
+    })
+    //麻将
+    $(document).ready(function(){
+        $("#btn2").on("click",function(){
+            var  uid=$("#uid").val();
+            var paixin=$("#px").val();
+            if(!uid){
+                alert('请先进行玩家查找！');
+                return false;
+            }
+            if(!paixin){
+                alert('牌型配置不能为空！');
+                return false;
+            }
+            //在与服务器通讯较慢时给用户提示信息
+            $("#message").text("正在操作，请稍后...");
+            //向服务器发送请求(get、post)
+            $.post("{:url('CeShi/dopaixing')}",
+                {
+                    uid:uid,
+                    paixin:paixin
+                },
+                function(data){
+                    if(data.code==1){
+                        $("#message").text(data.message);
+                    }else{
+                        $("#message").text(data.message);
+                    }
+                });
+        })
+    })
+    //推锅
+    $(document).ready(function(){
+        $("#btn3").on("click",function(){
+            var  uid=$("#uid").val();
+            var tuiguo=$("#tuiguo").val();
+            if(!uid){
+                alert('请先进行玩家查找！');
+                return false;
+            }
+            if(!tuiguo){
+                alert('牌型配置不能为空！');
+                return false;
+            }
+            //在与服务器通讯较慢时给用户提示信息
+            $("#message2").text("正在操作，请稍后...");
+            //向服务器发送请求(get、post)
+            $.post("{:url('CeShi/dotuiguo')}",
+                {
+                    uid:uid,
+                    tuiguo:tuiguo
+                },
+                function(data){
+                    if(data.code==1){
+                        $("#message2").text(data.message);
+                    }else{
+                        $("#message2").text(data.message);
+                    }
+                });
+        })
+    })
+
+
+</script>

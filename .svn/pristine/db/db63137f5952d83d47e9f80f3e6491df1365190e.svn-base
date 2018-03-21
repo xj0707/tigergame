@@ -1,0 +1,10 @@
+<?php
+namespace application\admin\controller;
+
+class MerchantController extends CommonController{
+
+    public function index(){
+
+    }
+
+}

@@ -1,0 +1,23 @@
+<div class="page-content">
+    <!-- <div class="col-sm-6 pull-right">
+       <span class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = 'adduser'">
+           添加玩家
+           <i class="icon-reply icon-only"></i>
+       </span>
+   </div> -->
+    <div class="page-header">
+        <h1>选择查看游戏类型</h1>
+        <div class="col-lg-2" style="margin-top: 50px;">
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle btn btn-sm" style="color: #0d8ddb; border:1px solid #0d8ddb;" type="button" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">点击分类查询 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href='{:url("index","typeid=40001")}'>罗塔之谜</a></li>
+                        <li><a href='{:url("indexb","typeid=40002")}'>小厨娘</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div><!-- /.page-header -->
+

@@ -1,0 +1,297 @@
+<?php
+namespace application\admin\controller;
+
+use think\Db;
+
+class GameReportsController extends CommonController{
+//玩家报表
+    public function index(){
+        if(!$this->come_where['parent'][1]){
+            $this->error('无商户无玩家信息！！');
+        }
+        $where['g.parent']=$this->come_where['parent'];
+        $players=Db::name('gameReports')->alias('g')->join('na_users u','g.parent=u.uid')
+            ->field('g.gameName gg,g.wct gwct,g.totalBetCount gtbc,g.avgRTP ga,g.totalPays gtp,g.totalBets gtb,g.totalPlayers gt,g.updatedAt gu,u.suffix us,u.username uu')
+            ->where($where)->paginate(20);
+        $role=session('tiger_role');
+        switch ($role){
+            case 1:
+                $data1=Db::name('users')->whereOr('msn','null')->where('suffix','<>','Platform')->select();
+                $data2=Db::name('users')->where('msn','<>',0)->select();
+                $this->assign('data1',$data1);
+                $this->assign('data2',$data2);
+                break;
+            case 2:
+                $data1=Db::name('users')->where('msn','0')->where('levelIndex','<>','0')->select();
+                $this->assign('data1',$data1);
+                break;
+            case 3:
+                $id=session('tiger_uid');
+                $users=Db::name('users')->field('uid')->where('id',$id)->find();
+                $uid=$users['uid'];
+                $data1=Db::name('users')->where('msn','null')->where('levelindex','like',"%$uid%")->select();
+                $data2=Db::name('users')->where('msn','<>',0)->where('levelindex','like',"%$uid%")->select();
+                $this->assign('data1',$data1);
+                $this->assign('data2',$data2);
+                break;
+            case 4:
+                $id=session('tiger_uid');
+                $users=Db::name('users')->where('id',$id)->find();
+                $uid=$users['uid'];
+                $data1=Db::name('users')->where('msn','0')->where('levelindex','like',"%$uid%")->select();
+                $this->assign('data1',$data1);
+                break;
+            case 5:
+                break;
+            case 6://超管
+                $data1=Db::name('users')->whereOr('msn','null')->where('suffix','<>','Platform')->select();
+                $data2=Db::name('users')->where('msn','<>',0)->select();
+                $data3=Db::name('users')->where('msn','0')->select();
+                $this->assign('data1',$data1);
+                $this->assign('data2',$data2);
+                $this->assign('data3',$data3);
+                break;
+        }
+        $this->assign('role',$role);
+        $this->assign('players',$players);
+        return $this->fetch();
+    }
+
+    /**
+     * 线路商查询
+     */
+    public function xl(){
+        $id=input('get.id');
+        $info=Db::name('users')->field('uid')->where('id',$id)->find();
+        $role=session('tiger_role');
+        if($info){
+            $uid=$info['uid'];
+            $user_ids=Db::name('users')->field('uid')->where('levelindex','like',"%$uid%")->select();
+            $guanli=[];
+            foreach ($user_ids as $user_id){
+                $guanli[]=$user_id['uid'];
+            }
+            $players=Db::name('gameReports')->alias('g')->join('na_users u','g.parent=u.uid')
+                ->field('g.gameName gg,g.wct gwct,g.totalBetCount gtbc,g.avgRTP ga,g.totalPays gtp,g.totalBets gtb,g.totalPlayers gt,g.updatedAt gu,u.suffix us,u.username uu')
+                ->where('g.parent','in',$guanli)->paginate(20);
+            switch ($role){
+                case 1:
+                    $data1=Db::name('users')->whereOr('msn','null')->where('suffix','<>','Platform')->select();
+                    $data2=Db::name('users')->where('msn','<>',0)->select();
+                    $this->assign('data1',$data1);
+                    $this->assign('data2',$data2);
+                    break;
+                case 2:
+                    $data1=Db::name('users')->where('msn','0')->where('levelIndex','<>','0')->select();
+                    $this->assign('data1',$data1);
+                    break;
+                case 3:
+                    $id=session('tiger_uid');
+                    $users=Db::name('users')->field('uid')->where('id',$id)->find();
+                    $uid=$users['uid'];
+                    $data1=Db::name('users')->where('msn','null')->where('levelindex','like',"%$uid%")->select();
+                    $data2=Db::name('users')->where('msn','<>',0)->where('levelindex','like',"%$uid%")->select();
+                    $this->assign('data1',$data1);
+                    $this->assign('data2',$data2);
+                    break;
+                case 4:
+                    $id=session('tiger_uid');
+                    $users=Db::name('users')->where('id',$id)->find();
+                    $uid=$users['uid'];
+                    $data1=Db::name('users')->where('msn','0')->where('levelindex','like',"%$uid%")->select();
+                    $this->assign('data1',$data1);
+                    break;
+                case 5:
+                    break;
+                case 6://超管
+                    $data1=Db::name('users')->whereOr('msn','null')->where('suffix','<>','Platform')->select();
+                    $data2=Db::name('users')->where('msn','<>',0)->select();
+                    $data3=Db::name('users')->where('msn','0')->select();
+                    $this->assign('data1',$data1);
+                    $this->assign('data2',$data2);
+                    $this->assign('data3',$data3);
+                    break;
+            }
+            $this->assign('role',$role);
+            $this->assign('players',$players);
+            return $this->fetch('index');
+        }
+
+    }
+    /**
+     * 商户查询
+     */
+    public function sh(){
+        $id=input('get.id');
+        $info=Db::name('users')->field('uid')->where('id',$id)->find();
+        $role=session('tiger_role');
+        if($info){
+            $uid=$info['uid'];
+            $players=Db::name('gameReports')->alias('g')->join('na_users u','g.parent=u.uid')
+                ->field('g.gameName gg,g.wct gwct,g.totalBetCount gtbc,g.avgRTP ga,g.totalPays gtp,g.totalBets gtb,g.totalPlayers gt,g.updatedAt gu,u.suffix us,u.username uu')
+                ->where('g.parent',$uid)->paginate(20);
+            switch ($role){
+                case 1:
+                    $data1=Db::name('users')->whereOr('msn','null')->where('suffix','<>','Platform')->select();
+                    $data2=Db::name('users')->where('msn','<>',0)->select();
+                    $this->assign('data1',$data1);
+                    $this->assign('data2',$data2);
+                    break;
+                case 2:
+                    $data1=Db::name('users')->where('msn','0')->where('levelIndex','<>','0')->select();
+                    $this->assign('data1',$data1);
+                    break;
+                case 3:
+                    $id=session('tiger_uid');
+                    $users=Db::name('users')->field('uid')->where('id',$id)->find();
+                    $uid=$users['uid'];
+                    $data1=Db::name('users')->where('msn','null')->where('levelindex','like',"%$uid%")->select();
+                    $data2=Db::name('users')->where('msn','<>',0)->where('levelindex','like',"%$uid%")->select();
+                    $this->assign('data1',$data1);
+                    $this->assign('data2',$data2);
+                    break;
+                case 4:
+                    $id=session('tiger_uid');
+                    $users=Db::name('users')->where('id',$id)->find();
+                    $uid=$users['uid'];
+                    $data1=Db::name('users')->where('msn','0')->where('levelindex','like',"%$uid%")->select();
+                    $this->assign('data1',$data1);
+                    break;
+                case 5:
+                    break;
+                case 6://超管
+                    $data1=Db::name('users')->whereOr('msn','null')->where('suffix','<>','Platform')->select();
+                    $data2=Db::name('users')->where('msn','<>',0)->select();
+                    $data3=Db::name('users')->where('msn','0')->select();
+                    $this->assign('data1',$data1);
+                    $this->assign('data2',$data2);
+                    $this->assign('data3',$data3);
+                    break;
+            }
+            $this->assign('role',$role);
+            $this->assign('players',$players);
+            return $this->fetch('index');
+        }
+
+    }
+
+    /**
+     * 代理商查询
+     */
+    public function dl(){
+        $id=input('get.id');
+        $info=Db::name('users')->field('uid')->where('id',$id)->find();
+        $role=session('tiger_role');
+        if($info){
+            $uid=$info['uid'];
+            $user_ids=Db::name('users')->field('uid')->where('levelindex','like',"%$uid%")->select();
+            $guanli=[$uid];
+            foreach ($user_ids as $user_id){
+                $guanli[]=$user_id['uid'];
+            }
+            $players=Db::name('gameReports')->alias('g')->join('na_users u','g.parent=u.uid')
+                ->field('g.gameName gg,g.wct gwct,g.totalBetCount gtbc,g.avgRTP ga,g.totalPays gtp,g.totalBets gtb,g.totalPlayers gt,g.updatedAt gu,u.suffix us,u.username uu')
+                ->where('g.parent','in',$guanli)->paginate(20);
+            switch ($role){
+                case 1:
+                    $data1=Db::name('users')->whereOr('msn','null')->where('suffix','<>','Platform')->select();
+                    $data2=Db::name('users')->where('msn','<>',0)->select();
+                    $this->assign('data1',$data1);
+                    $this->assign('data2',$data2);
+                    break;
+                case 2:
+                    $data1=Db::name('users')->where('msn','0')->where('levelIndex','<>','0')->select();
+                    $this->assign('data1',$data1);
+                    break;
+                case 3:
+                    $id=session('tiger_uid');
+                    $users=Db::name('users')->field('uid')->where('id',$id)->find();
+                    $uid=$users['uid'];
+                    $data1=Db::name('users')->where('msn','null')->where('levelindex','like',"%$uid%")->select();
+                    $data2=Db::name('users')->where('msn','<>',0)->where('levelindex','like',"%$uid%")->select();
+                    $this->assign('data1',$data1);
+                    $this->assign('data2',$data2);
+                    break;
+                case 4:
+                    $id=session('tiger_uid');
+                    $users=Db::name('users')->where('id',$id)->find();
+                    $uid=$users['uid'];
+                    $data1=Db::name('users')->where('msn','0')->where('levelindex','like',"%$uid%")->select();
+                    $this->assign('data1',$data1);
+                    break;
+                case 5:
+                    break;
+                case 6://超管
+                    $data1=Db::name('users')->whereOr('msn','null')->where('suffix','<>','Platform')->select();
+                    $data2=Db::name('users')->where('msn','<>',0)->select();
+                    $data3=Db::name('users')->where('msn','0')->select();
+                    $this->assign('data1',$data1);
+                    $this->assign('data2',$data2);
+                    $this->assign('data3',$data3);
+                    break;
+            }
+            $this->assign('role',$role);
+            $this->assign('players',$players);
+            return $this->fetch('index');
+        }
+    }
+
+    /**
+     *玩家用户名查询
+     */
+    public function likeGamename(){
+        $gamename=input('post.gamename');
+        $role=session('tiger_role');
+        $where['g.parent']=$this->come_where['parent'];
+        $players=Db::name('gameReports')->alias('g')->join('na_users u','g.parent=u.uid')
+            ->field('g.gameName gg,g.wct gwct,g.totalBetCount gtbc,g.avgRTP ga,g.totalPays gtp,g.totalBets gtb,g.totalPlayers gt,g.updatedAt gu,u.suffix us,u.username uu')
+            ->where('g.gameName','like',"%$gamename%")->where($where)->paginate(20);
+        switch ($role) {
+            case 1:
+                $data1 = Db::name('users')->whereOr('msn', 'null')->where('suffix', '<>', 'Platform')->select();
+                $data2 = Db::name('users')->where('msn', '<>', 0)->select();
+                $this->assign('data1', $data1);
+                $this->assign('data2', $data2);
+                break;
+            case 2:
+                $data1 = Db::name('users')->where('msn', '0')->where('levelIndex','<>','0')->select();
+                $this->assign('data1', $data1);
+                break;
+            case 3:
+                $id = session('tiger_uid');
+                $users = Db::name('users')->field('uid')->where('id', $id)->find();
+                $uid = $users['uid'];
+                $data1 = Db::name('users')->where('msn', 'null')->where('levelindex', 'like', "%$uid%")->select();
+                $data2 = Db::name('users')->where('msn', '<>', 0)->where('levelindex', 'like', "%$uid%")->select();
+                $this->assign('data1', $data1);
+                $this->assign('data2', $data2);
+                break;
+            case 4:
+                $id = session('tiger_uid');
+                $users = Db::name('users')->where('id', $id)->find();
+                $uid = $users['uid'];
+                $data1 = Db::name('users')->where('msn', '0')->where('levelindex', 'like', "%$uid%")->select();
+                $this->assign('data1', $data1);
+                break;
+            case 5:
+                break;
+            case 6://超管
+                $data1=Db::name('users')->whereOr('msn','null')->where('suffix','<>','Platform')->select();
+                $data2=Db::name('users')->where('msn','<>',0)->select();
+                $data3=Db::name('users')->where('msn','0')->select();
+                $this->assign('data1',$data1);
+                $this->assign('data2',$data2);
+                $this->assign('data3',$data3);
+                break;
+        }
+        $this->assign('role',$role);
+        $this->assign('players',$players);
+        return $this->fetch('index');
+
+    }
+
+
+
+
+
+}

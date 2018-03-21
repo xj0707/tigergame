@@ -1,0 +1,35 @@
+<?php
+namespace application\admin\controller;
+
+use think\Db;
+use think\Session;
+
+class GameSetController extends CommonController{
+    //
+    public function index(){
+        $userIds=session('tiger_parentId');
+        if(count($userIds)){
+            $userinfos=Db::name('users')->where('uid','in',$userIds)->where('msn','<>',-1)->paginate(20);
+            $this->assign('userinfos',$userinfos);
+            return $this->fetch();
+        }else{
+            $this->error('无任何商户信息！');
+        }
+    }
+
+    //线数线注设置
+    public function xsxz(){
+        $uid=input('uid');
+        $info=Db::name('users')->where('uid',$uid)->find();
+        $this->assign('nickname',$info['nickname']);
+        $this->assign('xs',$info['linecfg']);
+        $this->assign('xz',$info['betcfg']);
+        $this->assign('uid',$uid);
+        return $this->fetch();
+    }
+
+
+
+
+
+}

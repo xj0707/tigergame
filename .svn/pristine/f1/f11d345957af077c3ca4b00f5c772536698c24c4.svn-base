@@ -1,0 +1,70 @@
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+        <span class="btn btn-sm btn-primary pull-right" onclick="javascript:window.history.back();">
+            上一页
+            <i class="icon-reply icon-only"></i>
+        </span>
+    </div>
+    <div class="page-header">
+        <h1>
+           商户信息
+        </h1>
+    </div><!-- /.page-header -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <table id="simple-table" class="table  table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>ID</th>
+                            <th>账号</th>
+                            <th>昵称</th>
+                            <th>洗马比</th>
+                            <th>成数</th>
+                            <th>线路号</th>
+                            <th>上级</th>
+                            <th>创建时间</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        {volist name="userinfos" id="vo"}
+                        <tr>
+                            <td>{$i}</td>
+                            <td>{$vo.uid}</td>
+                            <td>{$vo.username}</td>
+                            <td>{$vo.nickname}</td>
+                            <td>{$vo.wcr}</td>
+                            <td>{$vo.ptr}</td>
+                            <td>{$vo.msn}</td>
+                            <td>
+                                {if condition="$vo.parent=='00'"}
+                                    无
+                                {elseif condition="$vo.parent=='01'" /}
+                                    NA管理员
+                                {else/}
+                                    {$info[$key][$vo.parent]}
+                                {/if}
+                            </td>
+                            <td>{$vo.createdAt}</td>
+                            <td></td>
+                        </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+                    {$userinfos->render()}
+                </div><!-- /.span -->
+            </div><!-- /.row -->
+
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div><!-- /.page-content -->
+
+
+

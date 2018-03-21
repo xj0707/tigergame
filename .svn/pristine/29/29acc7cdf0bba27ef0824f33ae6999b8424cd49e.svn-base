@@ -1,0 +1,387 @@
+[ 2017-03-30T15:10:15+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/public/admin/user/index
+[ log ] localhost/Admin/public/admin/user/index [运行时间：0.161009s][吞吐率：6.21req/s] [内存消耗：1,934.80kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\Admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-03-30T15:10:20+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/public/admin/users/index
+[ log ] localhost/Admin/public/admin/users/index [运行时间：0.128007s][吞吐率：7.81req/s] [内存消耗：2,544.85kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\Admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\Admin\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-03-30T15:10:21+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/public/admin/login/index
+[ log ] localhost/Admin/public/admin/login/index [运行时间：0.094005s][吞吐率：10.64req/s] [内存消耗：2,527.48kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\Admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/Admin/public/admin/users/index',
+  'cookie' => 'PHPSESSID=u6v7v57fb6kbup7ngcs5n0uqn2',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\Admin\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\Admin\public/../application/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\Admin\application\admin\controller\LoginController.php:24]
+
+---------------------------------------------------------------
+[ 2017-03-30T15:10:26+08:00 ] 127.0.0.1 127.0.0.1 POST /Admin/public/admin/login/index
+[ log ] localhost/Admin/public/admin/login/index [运行时间：0.216012s][吞吐率：4.63req/s] [内存消耗：4,086.46kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp\www\Admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/Admin/public/admin/login/index',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=u6v7v57fb6kbup7ngcs5n0uqn2',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '40',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'dosubmit' => '1',
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\Admin\application\admin\controller\LoginController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\wamp\www\Admin\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=gzmj;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_admin` [ RunTime:0.035002s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`password` FROM `t_admin` WHERE  `username` = 'admin' LIMIT 1    [ RunTime:0.009000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=gzmj;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] UPDATE `t_admin`  SET `lastlogintime`=1490857826,`lastloginip`=2130706433  WHERE  `id` = 1      [ RunTime:0.024001s ]
+
+---------------------------------------------------------------
+[ 2017-03-30T15:10:30+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/public/admin/index/index
+[ log ] localhost/Admin/public/admin/index/index [运行时间：0.158009s][吞吐率：6.33req/s] [内存消耗：4,026.41kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\Admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/Admin/public/admin/login/index',
+  'cookie' => 'PHPSESSID=u6v7v57fb6kbup7ngcs5n0uqn2',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\Admin\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\Admin\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\Admin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=gzmj;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_menu` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `t_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-03-30T15:10:31+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/public/admin/index/favicon.ico
+[ log ] localhost/Admin/public/admin/index/favicon.ico [运行时间：0.180010s][吞吐率：5.56req/s] [内存消耗：3,519.18kb] [文件加载：43]
+[ info ] [ LANG ] D:\wamp\www\Admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=u6v7v57fb6kbup7ngcs5n0uqn2',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=gzmj;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_admin_log` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] INSERT INTO `t_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'Index' , 'favicon.ico' , 1 , 'admin' , 2130706433)         [ RunTime:0.028002s ]
+
+---------------------------------------------------------------
+[ 2017-03-30T15:10:31+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/public/static/artDialog/icons/loading.gif
+[ log ] localhost/Admin/public/static/artDialog/icons/loading.gif [运行时间：0.050003s][吞吐率：20.00req/s] [内存消耗：1,934.23kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\Admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/Admin/public/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=u6v7v57fb6kbup7ngcs5n0uqn2',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-03-30T15:10:34+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/public/admin/users/index
+[ log ] localhost/Admin/public/admin/users/index [运行时间：0.376022s][吞吐率：2.66req/s] [内存消耗：4,595.22kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp\www\Admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/Admin/public/admin/index/index',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=u6v7v57fb6kbup7ngcs5n0uqn2',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\UsersController->index[ D:\wamp\www\Admin\application\admin\controller\UsersController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\Admin\public/../application/admin\view\users\index.html [ array (
+  0 => 'UserInfo',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\Admin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=gzmj;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_admin_log` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] INSERT INTO `t_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'Users' , 'index' , 1 , 'admin' , 2130706433)         [ RunTime:0.025001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=gzmj;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_users` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `t_users` WHERE  (  userid>1 ) LIMIT 1   [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `t_users` WHERE  (  userid>1 ) LIMIT 0,20   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=gzmj;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_menu` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `t_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: [D:\wamp\www\Admin\application\admin\model\Users.php:15]
+
+---------------------------------------------------------------
+[ 2017-03-30T15:10:35+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/public/admin/users/favicon.ico
+[ log ] localhost/Admin/public/admin/users/favicon.ico [运行时间：0.167009s][吞吐率：5.99req/s] [内存消耗：3,552.42kb] [文件加载：43]
+[ info ] [ LANG ] D:\wamp\www\Admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'users',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=u6v7v57fb6kbup7ngcs5n0uqn2',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:dbname=gzmj;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_admin_log` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] INSERT INTO `t_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'Users' , 'favicon.ico' , 1 , 'admin' , 2130706433)         [ RunTime:0.041002s ]
+
+---------------------------------------------------------------
+[ 2017-03-30T15:10:36+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/public/static/artDialog/icons/loading.gif
+[ log ] localhost/Admin/public/static/artDialog/icons/loading.gif [运行时间：0.054003s][吞吐率：18.52req/s] [内存消耗：1,934.23kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\Admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/Admin/public/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=u6v7v57fb6kbup7ngcs5n0uqn2',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

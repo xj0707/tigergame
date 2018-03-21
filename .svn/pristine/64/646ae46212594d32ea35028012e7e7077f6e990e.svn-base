@@ -1,0 +1,129 @@
+<?php
+namespace application\admin\controller;
+
+use think\Db;
+use think\Session;
+
+class GameSetController extends CommonController{
+    //
+    public function index(){
+        $userIds=session('tiger_parentId');
+        if(count($userIds)){
+            $userinfos=Db::name('users')->where('uid','in',$userIds)->where('msn','<>',-1)->paginate(20);
+            $this->assign('userinfos',$userinfos);
+            return $this->fetch();
+        }else{
+            $this->error('无任何商户信息！');
+        }
+    }
+
+    //线数线注设置
+    public function xsxz(){
+        //$this->error('暂未开通');
+        $uid=input('uid');
+        $info=Db::name('users')->where('uid',$uid)->find();
+        //初始线注
+        $xzinit=[
+            ['v1'=>0.01,'istrue'=>0],['v1'=>0.25,'istrue'=>0],['v1'=>0.50,'istrue'=>0],['v1'=>1.0,'istrue'=>0],
+            ['v1'=>1.25,'istrue'=>0],['v1'=>2.50,'istrue'=>0],['v1'=>3.75,'istrue'=>0],['v1'=>5.0,'istrue'=>0],
+            ['v1'=>10.0,'istrue'=>0],['v1'=>20.0,'istrue'=>0],['v1'=>25.0,'istrue'=>0],['v1'=>50.0,'istrue'=>0],
+            ['v1'=>100.0,'istrue'=>0],['v1'=>125.0,'istrue'=>0],['v1'=>200.0,'istrue'=>0]
+        ];
+        $xzinfo=explode(',',$info['betcfg']);
+        foreach ($xzinit as $key=>$xz){
+            if(in_array($xz['v1'],$xzinfo)){
+                $xzinit[$key]['istrue']=1;
+            }
+        }
+        $this->assign('nickname',$info['nickname']);
+        $this->assign('xzinit',$xzinit);
+        $this->assign('xs',$info['linecfg']);
+        $this->assign('uid',$uid);
+        return $this->fetch();
+    }
+    //线数请求
+    public function doxs(){
+        $uid=input('uid');
+        $xs=input('xs');
+        $typeId=input('typeId');
+        if($typeId==40001){
+            $url=config('xsxz40001');
+        }elseif($typeId==40002){
+            $url=config('xsxz40002');
+        }
+
+        $data=[
+            'uid'=>$uid,
+            'linecfg'=>$xs
+        ];
+        if($xs>25 || $xs<0){
+            $this->error('线数应该在0-25之间');
+        }
+        $jsonstr=json_encode($data);
+        $ch=curl_init();
+        curl_setopt($ch,CURLOPT_URL,$url);
+        curl_setopt($ch,CURLOPT_HEADER,0);
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+        curl_setopt($ch,CURLOPT_POST,true);
+        curl_setopt($ch,CURLOPT_POSTFIELDS,$jsonstr);
+        // 设置HTTPS支持
+        date_default_timezone_set('PRC');
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+        $output=curl_exec($ch);
+        curl_close($ch);
+        if($output){
+            $obj=json_decode($output);
+            if($obj->code==0) {
+                return json(['code'=>1,'message'=>'操作成功！']);
+            }else{
+                return json(['code'=>-1,'message'=>'操作失败！'.$obj->err]);
+            }
+        }else{
+            return json(['code'=>-1,'message'=>'请求失败！']);
+        }
+    }
+    //线注请求修改
+    public function doxz(){
+        $uid=input('uid');
+        $xzstr=input('xz');
+        $typeId=input('typeId');
+        if($typeId==40001){
+            $url=config('xsxz40001');
+        }elseif($typeId==40002){
+            $url=config('xsxz40002');
+        }
+
+        $data=[
+            'uid'=>$uid,
+            'betcfg'=>$xzstr
+        ];
+        $jsonstr=json_encode($data);
+        $ch=curl_init();
+        curl_setopt($ch,CURLOPT_URL,$url);
+        curl_setopt($ch,CURLOPT_HEADER,0);
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+        curl_setopt($ch,CURLOPT_POST,true);
+        curl_setopt($ch,CURLOPT_POSTFIELDS,$jsonstr);
+        // 设置HTTPS支持
+        date_default_timezone_set('PRC');
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+        $output=curl_exec($ch);
+        curl_close($ch);
+        //var_dump($output);
+        if($output){
+            $obj=json_decode($output);
+            if($obj->code==0) {
+                return json(['code'=>1,'message'=>'操作成功！']);
+            }else{
+                return json(['code'=>-1,'message'=>'操作失败！'.$obj->err]);
+            }
+        }else{
+            return json(['code'=>-1,'message'=>'请求失败！']);
+        }
+    }
+
+
+
+}

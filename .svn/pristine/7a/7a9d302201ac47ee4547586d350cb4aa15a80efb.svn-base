@@ -1,0 +1,332 @@
+<?php
+namespace application\admin\controller;
+
+use think\Controller;
+use think\Db;
+class ApiController extends Controller{
+
+    //写入管理员数据
+    public function addAdminInfo(){
+        header("Access-Control-Allow-Origin:*");
+        $info=file_get_contents('php://input');
+        $data=json_decode($info);
+        $datainfo['uid']=$data->uid;
+        $datainfo['parent']=$data->parent;
+        $datainfo['ancestor']=$data->ancestor;
+        $datainfo['username']=$data->username;
+        $datainfo['suffix']=$data->suffix;
+        $datainfo['msn']=$data->msn;
+        $datainfo['content']=$data->content;
+        $datainfo['createdAt']=$data->createdAt;
+        $datainfo['updatedAt']=$data->updatedAt;
+        $datainfo['levelindex']=$data->levelindex;
+        $datainfo['wcr']=$data->wcr;
+        $datainfo['ptr']=$data->ptr;
+        if(!$datainfo['uid'] || !$datainfo['suffix'] ){
+            return json(['code'=>0,'message'=>'数据不完整']);
+        }
+
+        $uinfo=Db::name('users')->where('uid',$data->uid)->find();
+        if($uinfo){
+            $res=Db::name('users')->where('id',$uinfo['id'])->update($datainfo);
+            if($res){
+                return json(['code'=>1,'message'=>'操作成功']);
+            }else{
+                return json(['code'=>0,'message'=>'操作失败']);
+            }
+        }else{
+            $res=Db::name('users')->insert($datainfo);
+            if($res){
+                $adminId = Db::name('users')->getLastInsID();
+                $groups=Db::name('adminGroup')->field('id')->select();
+                foreach($groups as $v) {
+                    Db::name('adminGroupAccess')->insert(['uid' => $adminId, 'group_id' => $v['id']]);//生成权限
+                }
+                return json(['code'=>1,'message'=>'操作成功']);
+            }else{
+                return json(['code'=>0,'message'=>'创建失败']);
+            }
+        }
+
+    }
+    //写入玩家数据
+    public function addPlayers(){
+        header("Access-Control-Allow-Origin:*");
+        $info=file_get_contents('php://input');
+        $data=json_decode($info);
+        $playerinfo['uid']=$data->uid;
+        $playerinfo['parent']=$data->parent;
+        $playerinfo['username']=$data->username;
+        $playerinfo['nickname']=$data->nickname;
+        $playerinfo['suffix']=$data->suffix;
+        $playerinfo['msn']=$data->msn;
+        $playerinfo['createdAt']=date("Y-m-d H:i:s",time());
+        $playerinfo['balance']=$data->balance;
+        $playerinfo['waterflow']=$data->waterflow;
+        $playerinfo['content']=$data->content;
+        if(!$playerinfo['uid'] || !$playerinfo['parent'] || !$playerinfo['username']){
+            return json(['code'=>0,'message'=>'数据不完整']);
+        }
+        $uinfo=Db::name('players')->where('uid',$data->uid)->find();
+        if($uinfo){
+            $res=Db::name('players')->where('id',$uinfo['id'])->update($playerinfo);
+            if($res){
+                return json(['code'=>1,'message'=>'操作成功']);
+            }else{
+                return json(['code'=>0,'message'=>'操作失败']);
+            }
+        }else{
+            $res=Db::name('players')->insert($playerinfo);
+            if($res){
+                return json(['code'=>1,'message'=>'操作成功']);
+            }else{
+                return json(['code'=>0,'message'=>'操作失败']);
+            }
+        }
+
+    }
+
+    //写入游戏报表数据
+    public  function addGameReports(){
+        header("Access-Control-Allow-Origin:*");
+        $info=file_get_contents('php://input');
+        $data=json_decode($info);
+        $playerinfo['gameName']=$data->gameName;
+        $playerinfo['updatedAt']=$data->updatedAt;
+        $playerinfo['totalPays']=$data->totalPays;
+        $playerinfo['totalBets']=$data->totalBets;
+        $playerinfo['totalBetCount']=$data->totalBetCount;
+        $playerinfo['totalPlayers']=$data->totalPlayers;
+        $playerinfo['avgRTP']=$data->avgRTP;
+        $playerinfo['parent']=$data->parent;
+        $playerinfo['wct']=$data->wct;
+
+        if(!$playerinfo['gameName'] || !$playerinfo['parent']){
+            return json(['code'=>0,'message'=>'数据不完整']);
+        }
+        $res=Db::name('gameReports')->insert($playerinfo);
+        if($res){
+            return json(['code'=>1,'message'=>'操作成功']);
+        }else{
+            return json(['code'=>0,'message'=>'操作失败']);
+        }
+    }
+
+    //写入玩家报表数据
+    public function addPlayerReports(){
+        header("Access-Control-Allow-Origin:*");
+        $info=file_get_contents('php://input');
+        $data=json_decode($info);
+        $playerinfo['username']=$data->username;
+        $playerinfo['betCount']=$data->betCount;
+        $playerinfo['avgRTp']=$data->avgRTp;
+        $playerinfo['totalPays']=$data->totalPays;
+        $playerinfo['totalBets']=$data->totalBets;
+        $playerinfo['balance']=$data->balance;
+        $playerinfo['waterflow']=$data->waterflow;
+        $playerinfo['msn']=$data->msn;
+        $playerinfo['parent']=$data->parent;
+        $playerinfo['wct']=$data->wct;
+        if(!$playerinfo['username'] || !$playerinfo['parent']){
+            return json(['code'=>0,'message'=>'数据不完整']);
+        }
+        $res=Db::name('playerReports')->insert($playerinfo);
+        if($res){
+            return json(['code'=>1,'message'=>'操作成功']);
+        }else{
+            return json(['code'=>0,'message'=>'操作失败']);
+        }
+    }
+
+    //写入商户数据
+
+	//新接口验证身份信息 返回登录URL ---NA平台
+	public function checkLoginAccess(){
+        header("Access-Control-Allow-Origin:*");
+        $info=file_get_contents('php://input');
+        $data=json_decode($info);
+        $uid=$data->id;
+        $timestamp=$data->timestamp;
+        $sign=$data->sign;
+        if(!$uid ||  !$timestamp  || !$sign){
+            return json(['code'=>1,'msg'=>'参数不完整!']);
+        }
+        $str='id'.$uid.'timestamp'.$timestamp;
+        $str=urlencode($str);
+        $gameKey=config('tigerkey');//定义老虎机的key
+        $truesign=$gameKey.$str.$gameKey;
+        $truesign=hash('sha256',$truesign);
+        if($truesign!=$sign){
+            $jsonarr=[
+                'code'=>1,
+                'msg'=>'签名验证失败!',
+            ];
+            return  json($jsonarr);
+        }
+        //用uid去查找这个商户信息存在不？
+        $info=Db::name('users')->where('uid',$uid)->find();
+        if(!$info){
+            $jsonarr=[
+                'code'=>1,
+                'msg'=>'信息没有同步,后台没有检测到商户,请联系管理员!',
+            ];
+            return  json($jsonarr);
+        }
+        //取出msn /suffix;
+        $msn=$info['msn'];
+        $suffix=$info['suffix'];
+        $levelIndex=$info['levelindex'];
+        $username=$suffix.$uid;
+        $guanli=[];
+        $time=time();
+        //定义身份
+        if($levelIndex==0 && $suffix=='Platform'){//管理员
+            //找出所有的线路商或者商户
+            $guanliinfos1=Db::name('users')->where('levelindex','like','%01%')->where('msn','<>',0)->select();
+            $guanliinfos2=Db::name('users')->where('levelindex','like','%01%')->where('msn','null')->select();
+            $guanliinfos=array_merge($guanliinfos2,$guanliinfos1);
+            foreach ($guanliinfos as $guanliinfo){
+                $guanli[]=$guanliinfo['uid'];
+            }
+            //生成URL
+            $data=[
+                'username'=>$username,
+                'uid'=>$info['id'],
+                'guanli'=>$guanli,
+                'time'=>$time,
+                'role'=>1,//管理员
+            ];
+            $token=serialize($data);
+            $token = encry_code($token);//加密
+            $jsonarr=[
+                'code'=>0,
+                'msg'=>'success',
+                'url'=>'http://'.config('naurl').'/admin/login/apilogin/token/'.$token.'.html'
+            ];
+            return  json($jsonarr);
+        }
+        if($levelIndex==0 && $msn==0){//顶级代理
+            $guanli[]=$uid;
+            $dailiinfos=Db::name('users')->where('levelindex','like','%01%')->where('msn',0)->select();
+            foreach ($dailiinfos as $dailiinfo){
+                $guanli[]=$dailiinfo['uid'];
+            }
+            //生成URL
+            $data=[
+                'username'=>$username,
+                'uid'=>$info['id'],
+                'guanli'=>$guanli,
+                'time'=>$time,
+                'role'=>2,//顶级代理
+            ];
+            $token=serialize($data);
+            $token = encry_code($token);//加密
+            $jsonarr=[
+                'code'=>0,
+                'msg'=>'success',
+                'url'=>'http://'.config('naurl').'/admin/login/apilogin/token/'.$token.'.html'
+            ];
+            return  json($jsonarr);
+        }
+        if(!isset($msn)){//值为ｎｕｌｌ就是线路商
+            $xianlus=Db::name('users')->where('levelindex','like',"%$uid%")->select();
+            foreach ($xianlus as $xianlu){
+                $guanli[]=$xianlu['uid'];
+            }
+            //生成URL
+            $data=[
+                'username'=>$username,
+                'uid'=>$info['id'],
+                'guanli'=>$guanli,
+                'time'=>$time,
+                'role'=>3//线路商
+            ];
+            $token=serialize($data);
+            $token = encry_code($token);//加密
+            $jsonarr=[
+                'code'=>0,
+                'msg'=>'success',
+                'url'=>'http://'.config('naurl').'/admin/login/apilogin/token/'.$token.'.html'
+            ];
+            return  json($jsonarr);
+        }else{
+            if($msn==0){//次级代理
+                $guanli[]=$uid;
+                $dailiinfos=Db::name('users')->where('levelindex','like',"%$uid%")->select();
+                foreach ($dailiinfos as $dailiinfo){
+                    $guanli[]=$dailiinfo['uid'];
+                }
+                //生成URL
+                $data=[
+                    'username'=>$username,
+                    'uid'=>$info['id'],
+                    'guanli'=>$guanli,
+                    'time'=>$time,
+                    'role'=>4//普通代理
+                ];
+                $token=serialize($data);
+                $token = encry_code($token);//加密
+                $jsonarr=[
+                    'code'=>0,
+                    'msg'=>'success',
+                    'url'=>'http://'.config('naurl').'/admin/login/apilogin/token/'.$token.'.html'
+                ];
+                return  json($jsonarr);
+
+            }else{//商户
+                $guanli[]=$uid;
+                //生成URL
+                $data=[
+                    'username'=>$username,
+                    'uid'=>$info['id'],
+                    'guanli'=>$guanli,
+                    'time'=>$time,
+                    'role'=>5//商户
+                ];
+                $token=serialize($data);
+                $token = encry_code($token);//加密
+                $jsonarr=[
+                    'code'=>0,
+                    'msg'=>'success',
+                    'url'=>'http://'.config('naurl').'/admin/login/apilogin/token/'.$token.'.html'
+                ];
+                return  json($jsonarr);
+            }
+        }
+
+    }
+//线路
+    public function treeXianLu($uid){
+        $xinlus=Db::name('users')->where('parent',$uid)->select();
+        static $uids=array();
+        foreach ($xinlus as $xinlu){
+            if($xinlu['msn']){
+                $uids[]=$xinlu['uid'];
+            }else{
+                $this->treeXianLu($xinlu['uid']);
+            }
+        }
+        return $uids;
+    }
+	//代理
+    public function treeDaiLi(){
+
+
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

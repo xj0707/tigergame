@@ -1,0 +1,123 @@
+<div class="page-content">
+
+    <div class="page-header">
+        <h1>
+            线数线注设置
+            <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+                商户昵称：{$nickname}
+            </small>
+        </h1>
+    </div>
+
+    <div>
+
+        <div>
+            <label><h4 style="color: blue;font-weight: bold;">线数修改：</h4></label>
+        </div>
+        线数：<input type="text" name="xs" id="xs" value="{$xs}" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" maxlength="2"/>
+        <button type="button" class="btn btn-default" id="btn1">确定修改</button>
+        <input type="hidden" name="uid"  id="uid" value="{$uid}"/>
+        <span class="help-block" id="info"></span>
+
+    </div>
+    <div style="margin-top: 20px;"></div>
+    <hr/>
+    <div>
+        <div>
+            <label><h4 style="color: blue;font-weight: bold;">线注修改：</h4></label>
+        </div>
+        <div>
+            {volist name="xzinit" id="vo"}
+            <label class="checkbox-inline">
+                <input type="checkbox" name="xz{$key}" id="inlineCheckbox{$key}" value="{$vo.v1}" {if condition="$vo.istrue==1"} checked="checked" {/if}> {$vo.v1}
+            </label>
+            {/volist}
+        </div>
+        <div style="margin-top: 10px;">
+            <button type="button" class="btn btn-default" id="btn2">确定修改</button>
+            <span class="help-block" id="message"></span>
+        </div>
+
+    </div>
+    <div style="margin-top: 20px;"></div>
+    <hr/>
+
+
+
+</div>
+<!--[if !IE]> -->
+<script src="__ROOT__/static/ace1.4/assets/js/jquery-2.1.4.min.js"></script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script src="/static/ace1.4/assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+<script>
+    //线数
+    $(document).ready(function(){
+        $("#btn1").on("click",function(){
+           var  uid=$("#uid").val();
+           var  xs=$("#xs").val();
+           if(!xs){
+               alert('请输入线数');
+               return false;
+           }
+           if(!uid){
+               alert('参数丢失');
+               return false;
+           }
+            //在与服务器通讯较慢时给用户提示信息
+            $("#info").html("<span style='color: red;'>操作进行中，请稍后...</span>");
+            //向服务器发送请求(get、post)
+            $.post("{:url('doxz')}",
+                {
+                    uid:uid,
+                    xs:xs
+                },
+                function(data){
+                    if(data.code==1){
+                        $("#info").html("<span style='color: green;'>"+data.message+"</span>");
+                    }else{
+                        $("#info").html("<span style='color: red;'>"+data.message+"</span>");
+                    }
+                });
+        })
+    })
+    //线注
+    $(document).ready(function(){
+        $("#btn2").on("click",function(){
+            var  uid=$("#uid").val();
+            var xzstr='';
+            var xzarr=$("input:checked");
+            xzarr.each(function (i,item) {
+                xzstr += xzarr[i].value+',';
+            });
+            if(xzarr.length<2){
+                alert('请至少选择两个！');
+                return false;
+            };
+            if(!uid){
+                alert('参数丢失，请重新进入');
+                return false;
+            }
+            //在与服务器通讯较慢时给用户提示信息
+            $("#message").html("<span style='color: red;'>操作进行中，请稍后...</span>");
+            //向服务器发送请求(get、post)
+            $.post("{:url('doxz')}",
+                {
+                    uid:uid,
+                    xz:xzstr.substring(0,xzstr.length-1)
+                },
+                function(data){
+                    if(data.code==1){
+                        $("#message").text(data.message);
+                    }else{
+                        $("#message").text(data.message);
+                    }
+                });
+        })
+    })
+
+</script>

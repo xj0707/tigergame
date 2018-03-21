@@ -1,0 +1,3853 @@
+[ 2017-09-11T11:46:48+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php
+[ log ] localhost/tigergame/public/index.php [运行时间：0.149008s][吞吐率：6.71req/s] [内存消耗：1,638.12kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'pgv_pvi=956455936',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\tigergame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\tigergame\application\admin\controller\LoginController.php:25]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:46:54+08:00 ] 127.0.0.1 127.0.0.1 POST /tigergame/public/index.php
+[ log ] localhost/tigergame/public/index.php [运行时间：0.338019s][吞吐率：2.96req/s] [内存消耗：2,635.26kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '40',
+  'referer' => 'http://localhost/tigergame/public/index.php',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'dosubmit' => '1',
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\tigergame\application\admin\controller\LoginController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\wamp\www\tigergame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admin` [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`password` FROM `na_admin` WHERE  `username` = 'admin' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.047003s ]
+[ sql ] [ SQL ] SELECT `uid` FROM `na_users`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `na_admin`  SET `lastlogintime`=1505101614,`lastloginip`=2130706433  WHERE  `id` = 1      [ RunTime:0.033002s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:46:57+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/index/index.html
+[ log ] localhost/tigergame/public/index.php/admin/index/index.html [运行时间：0.184011s][吞吐率：5.43req/s] [内存消耗：2,569.34kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\tigergame\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\index\index.html [ array (
+  0 => 'msg',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.041003s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:46:58+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/index/favicon.ico
+[ log ] localhost/tigergame/public/index.php/admin/index/favicon.ico [运行时间：0.045003s][吞吐率：22.22req/s] [内存消耗：1,560.34kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:46:58+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.060004s][吞吐率：16.67req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:00+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/merchant/userinfo.html
+[ log ] localhost/tigergame/public/index.php/admin/merchant/userinfo.html [运行时间：0.234014s][吞吐率：4.27req/s] [内存消耗：2,913.52kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'merchant',
+    2 => 'userinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MerchantController->userinfo[ D:\wamp\www\tigergame\application\admin\controller\MerchantController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\merchant\userinfo.html [ array (
+  0 => 'info',
+  1 => 'userinfos',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.028002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 1     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = '154' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.023001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:01+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/merchant/favicon.ico
+[ log ] localhost/tigergame/public/index.php/admin/merchant/favicon.ico [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：1,562.51kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'merchant',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:01+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.031001s][吞吐率：32.26req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:05+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/merchant/userinfo.html
+[ log ] localhost/tigergame/public/index.php/admin/merchant/userinfo.html [运行时间：0.113007s][吞吐率：8.85req/s] [内存消耗：2,725.23kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'merchant',
+    2 => 'userinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/merchant/userinfo.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MerchantController->userinfo[ D:\wamp\www\tigergame\application\admin\controller\MerchantController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\merchant\userinfo.html [ array (
+  0 => 'info',
+  1 => 'userinfos',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = '154' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:05+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:10+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/menu/index.html
+[ log ] localhost/tigergame/public/index.php/admin/menu/index.html [运行时间：0.231013s][吞吐率：4.33req/s] [内存消耗：3,213.06kb] [文件加载：47]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/merchant/userinfo.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->index[ D:\wamp\www\tigergame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\menu\index.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.023001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` ORDER BY listorder asc  [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Menu'  AND `a` = 'index' LIMIT 1     [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:11+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/menu/favicon.ico
+[ log ] localhost/tigergame/public/index.php/admin/menu/favicon.ico [运行时间：0.028001s][吞吐率：35.71req/s] [内存消耗：1,577.26kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:11+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:18+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/menu/info.html?id=67
+[ log ] localhost/tigergame/public/index.php/admin/menu/info.html?id=67 [运行时间：0.153009s][吞吐率：6.54req/s] [内存消耗：2,876.72kb] [文件加载：47]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/menu/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '67',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->info[ D:\wamp\www\tigergame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\menu\info.html [ array (
+  0 => 'info',
+  1 => 'selectMenu',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` = 67 LIMIT 1    [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` ORDER BY listorder asc  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Menu'  AND `a` = 'info' LIMIT 1     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `na_menu` WHERE  `id` = 12 LIMIT 1    [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:19+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:23+08:00 ] 127.0.0.1 127.0.0.1 POST /tigergame/public/index.php/admin/menu/edit
+[ log ] localhost/tigergame/public/index.php/admin/menu/edit [运行时间：0.130008s][吞吐率：7.69req/s] [内存消耗：2,623.98kb] [文件加载：47]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '103',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/menu/info.html?id=67',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '67',
+  'parentid' => '48',
+  'icon' => '',
+  'name' => '商户信息',
+  'c' => 'merchant',
+  'a' => 'userinfo',
+  'data' => '',
+  'display' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->edit[ D:\wamp\www\tigergame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\wamp\www\tigergame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] UPDATE `na_menu`  SET `parentid`=48,`icon`='',`name`='商户信息',`c`='merchant',`a`='userinfo',`data`='',`display`=1,`updatetime`=1505101643  WHERE  `id` = 67            [ RunTime:0.040002s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:27+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/menu/index.html
+[ log ] localhost/tigergame/public/index.php/admin/menu/index.html [运行时间：0.152009s][吞吐率：6.58req/s] [内存消耗：2,863.41kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/menu/edit',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->index[ D:\wamp\www\tigergame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\menu\index.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` ORDER BY listorder asc  [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Menu'  AND `a` = 'index' LIMIT 1     [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:27+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.021001s][吞吐率：47.62req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:31+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/merchant/userinfo.html
+[ log ] localhost/tigergame/public/index.php/admin/merchant/userinfo.html [运行时间：0.100006s][吞吐率：10.00req/s] [内存消耗：2,725.22kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'merchant',
+    2 => 'userinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/menu/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MerchantController->userinfo[ D:\wamp\www\tigergame\application\admin\controller\MerchantController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\merchant\userinfo.html [ array (
+  0 => 'info',
+  1 => 'userinfos',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 1     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = '154' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:31+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:36+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/merchant/userinfo.html
+[ log ] localhost/tigergame/public/index.php/admin/merchant/userinfo.html [运行时间：0.100005s][吞吐率：10.00req/s] [内存消耗：2,725.20kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'merchant',
+    2 => 'userinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/merchant/userinfo.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MerchantController->userinfo[ D:\wamp\www\tigergame\application\admin\controller\MerchantController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\merchant\userinfo.html [ array (
+  0 => 'info',
+  1 => 'userinfos',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = '154' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:47:36+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.043003s][吞吐率：23.25req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:48:23+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/merchant/userinfo.html
+[ log ] localhost/tigergame/public/index.php/admin/merchant/userinfo.html [运行时间：0.112007s][吞吐率：8.93req/s] [内存消耗：2,725.22kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'merchant',
+    2 => 'userinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/merchant/userinfo.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MerchantController->userinfo[ D:\wamp\www\tigergame\application\admin\controller\MerchantController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\merchant\userinfo.html [ array (
+  0 => 'info',
+  1 => 'userinfos',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = '154' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:48:24+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.045003s][吞吐率：22.22req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:48:30+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/menu/index.html
+[ log ] localhost/tigergame/public/index.php/admin/menu/index.html [运行时间：0.164010s][吞吐率：6.10req/s] [内存消耗：2,863.48kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/merchant/userinfo.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->index[ D:\wamp\www\tigergame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\menu\index.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` ORDER BY listorder asc  [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Menu'  AND `a` = 'index' LIMIT 1     [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:48:31+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:48:37+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/menu/info.html?id=48
+[ log ] localhost/tigergame/public/index.php/admin/menu/info.html?id=48 [运行时间：0.084005s][吞吐率：11.90req/s] [内存消耗：2,682.76kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/menu/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '48',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->info[ D:\wamp\www\tigergame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\menu\info.html [ array (
+  0 => 'info',
+  1 => 'selectMenu',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.016000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` = 48 LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` ORDER BY listorder asc  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Menu'  AND `a` = 'info' LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `na_menu` WHERE  `id` = 12 LIMIT 1    [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:48:38+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.025002s][吞吐率：40.00req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:48:43+08:00 ] 127.0.0.1 127.0.0.1 POST /tigergame/public/index.php/admin/menu/edit
+[ log ] localhost/tigergame/public/index.php/admin/menu/edit [运行时间：0.131008s][吞吐率：7.63req/s] [内存消耗：2,623.97kb] [文件加载：47]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '113',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/menu/info.html?id=48',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '48',
+  'parentid' => '',
+  'icon' => 'fa-user-plus',
+  'name' => '商户管理',
+  'c' => 'Merchant',
+  'a' => 'userinfo',
+  'data' => '',
+  'display' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->edit[ D:\wamp\www\tigergame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\wamp\www\tigergame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] UPDATE `na_menu`  SET `parentid`=0,`icon`='fa-user-plus',`name`='商户管理',`c`='Merchant',`a`='userinfo',`data`='',`display`=1,`updatetime`=1505101723  WHERE  `id` = 48            [ RunTime:0.040002s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:48:47+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/menu/index.html
+[ log ] localhost/tigergame/public/index.php/admin/menu/index.html [运行时间：0.152008s][吞吐率：6.58req/s] [内存消耗：2,863.41kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/menu/edit',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->index[ D:\wamp\www\tigergame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\menu\index.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` ORDER BY listorder asc  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Menu'  AND `a` = 'index' LIMIT 1     [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:48:47+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:48:49+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/merchant/userinfo.html
+[ log ] localhost/tigergame/public/index.php/admin/merchant/userinfo.html [运行时间：0.106006s][吞吐率：9.43req/s] [内存消耗：2,725.23kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'merchant',
+    2 => 'userinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/menu/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MerchantController->userinfo[ D:\wamp\www\tigergame\application\admin\controller\MerchantController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\merchant\userinfo.html [ array (
+  0 => 'info',
+  1 => 'userinfos',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = '154' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:48:49+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:48:55+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/merchant/userinfo.html
+[ log ] localhost/tigergame/public/index.php/admin/merchant/userinfo.html [运行时间：0.123007s][吞吐率：8.13req/s] [内存消耗：2,725.22kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'merchant',
+    2 => 'userinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/merchant/userinfo.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MerchantController->userinfo[ D:\wamp\www\tigergame\application\admin\controller\MerchantController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\merchant\userinfo.html [ array (
+  0 => 'info',
+  1 => 'userinfos',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = '154' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:48:56+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.056003s][吞吐率：17.86req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:06+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/menu/index.html
+[ log ] localhost/tigergame/public/index.php/admin/menu/index.html [运行时间：0.148009s][吞吐率：6.76req/s] [内存消耗：2,863.48kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/merchant/userinfo.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->index[ D:\wamp\www\tigergame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\menu\index.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` ORDER BY listorder asc  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Menu'  AND `a` = 'index' LIMIT 1     [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:07+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:14+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/menu/info.html?id=67
+[ log ] localhost/tigergame/public/index.php/admin/menu/info.html?id=67 [运行时间：0.116006s][吞吐率：8.62req/s] [内存消耗：2,682.72kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/menu/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '67',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->info[ D:\wamp\www\tigergame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\menu\info.html [ array (
+  0 => 'info',
+  1 => 'selectMenu',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` = 67 LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` ORDER BY listorder asc  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Menu'  AND `a` = 'info' LIMIT 1     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `na_menu` WHERE  `id` = 12 LIMIT 1    [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:14+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.027002s][吞吐率：37.03req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:18+08:00 ] 127.0.0.1 127.0.0.1 POST /tigergame/public/index.php/admin/menu/edit
+[ log ] localhost/tigergame/public/index.php/admin/menu/edit [运行时间：0.100006s][吞吐率：10.00req/s] [内存消耗：2,623.97kb] [文件加载：47]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '103',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/menu/info.html?id=67',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '67',
+  'parentid' => '48',
+  'icon' => '',
+  'name' => '商户信息',
+  'c' => 'Merchant',
+  'a' => 'userinfo',
+  'data' => '',
+  'display' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->edit[ D:\wamp\www\tigergame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\wamp\www\tigergame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] UPDATE `na_menu`  SET `parentid`=48,`icon`='',`name`='商户信息',`c`='Merchant',`a`='userinfo',`data`='',`display`=1,`updatetime`=1505101758  WHERE  `id` = 67            [ RunTime:0.026001s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:22+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/menu/index.html
+[ log ] localhost/tigergame/public/index.php/admin/menu/index.html [运行时间：0.109007s][吞吐率：9.17req/s] [内存消耗：2,863.41kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/menu/edit',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->index[ D:\wamp\www\tigergame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\menu\index.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` ORDER BY listorder asc  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Menu'  AND `a` = 'index' LIMIT 1     [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:22+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:24+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/merchant/userinfo.html
+[ log ] localhost/tigergame/public/index.php/admin/merchant/userinfo.html [运行时间：0.114006s][吞吐率：8.77req/s] [内存消耗：2,725.18kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'merchant',
+    2 => 'userinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/menu/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MerchantController->userinfo[ D:\wamp\www\tigergame\application\admin\controller\MerchantController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\merchant\userinfo.html [ array (
+  0 => 'info',
+  1 => 'userinfos',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = '154' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:24+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.027002s][吞吐率：37.03req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:25+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/player/index.html
+[ log ] localhost/tigergame/public/index.php/admin/player/index.html [运行时间：0.210012s][吞吐率：4.76req/s] [内存消耗：3,065.42kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'player',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/merchant/userinfo.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\PlayerController->index[ D:\wamp\www\tigergame\application\admin\controller\PlayerController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\player\index.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'count',
+  4 => 'role',
+  5 => 'players',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_players` [ RunTime:0.060003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_players` `p` INNER JOIN `na_users` `u` ON `p`.`parent`=`u`.`uid` WHERE  `p`.`parent` IN ('fdew32432df3','435435dfdsfg') LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT p.username pu,p.nickname pn,p.msn pm,p.balance pb,p.waterflow pw,p.createdAt pc,u.suffix us,u.username uu FROM `na_players` `p` INNER JOIN `na_users` `u` ON `p`.`parent`=`u`.`uid` WHERE  `p`.`parent` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_players` WHERE  `parent` IN ('fdew32432df3','435435dfdsfg') LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '-1'  AND `suffix` <> 'Platform'    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  (  msn !='-1' and msn != '0' )  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '0'  AND `levelindex` <> '0'    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Player'  AND `a` = 'index' LIMIT 1     [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:26+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/player/favicon.ico
+[ log ] localhost/tigergame/public/index.php/admin/player/favicon.ico [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,696.34kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'player',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:26+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:27+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/player_reports/index.html
+[ log ] localhost/tigergame/public/index.php/admin/player_reports/index.html [运行时间：0.189011s][吞吐率：5.29req/s] [内存消耗：3,073.73kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'player_reports',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/player/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\PlayerReportsController->index[ D:\wamp\www\tigergame\application\admin\controller\PlayerReportsController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\player_reports\index.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'role',
+  4 => 'players',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_player_reports` [ RunTime:0.041002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_player_reports` `p` INNER JOIN `na_users` `u` ON `p`.`parent`=`u`.`uid` WHERE  `p`.`parent` IN ('fdew32432df3','435435dfdsfg') LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT p.username pu,p.wct pwct,p.msn pm,p.balance pb,p.waterflow pw,p.totalBetCount ptbc,p.avgRTP pa,p.totalPays ptp,p.totalBets ptb,u.suffix us,u.username uu FROM `na_player_reports` `p` INNER JOIN `na_users` `u` ON `p`.`parent`=`u`.`uid` WHERE  `p`.`parent` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '-1'  AND `suffix` <> 'Platform'    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  (  msn !='-1' and msn != '0' )  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '0'  AND `levelindex` <> '0'    [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'PlayerReports'  AND `a` = 'index' LIMIT 1     [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:27+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/player_reports/favicon.ico
+[ log ] localhost/tigergame/public/index.php/admin/player_reports/favicon.ico [运行时间：0.029001s][吞吐率：34.48req/s] [内存消耗：1,689.41kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'player_reports',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:28+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.040002s][吞吐率：25.00req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:28+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/game_reports/index.html
+[ log ] localhost/tigergame/public/index.php/admin/game_reports/index.html [运行时间：0.166009s][吞吐率：6.02req/s] [内存消耗：2,831.67kb] [文件加载：48]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_reports',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/player_reports/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameReportsController->index[ D:\wamp\www\tigergame\application\admin\controller\GameReportsController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\game_reports\index.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'role',
+  4 => 'players',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_player_reports` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT SUM(totalBetCount) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(totalPays) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBets) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `username` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBetCount) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalPays) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBets) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `username` FROM `na_users` WHERE  `uid` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '-1'  AND `suffix` <> 'Platform'    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  (  msn !='-1' and msn != '0' )  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '0'  AND `levelindex` <> '0'    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.016000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'GameReports'  AND `a` = 'index' LIMIT 1     [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: gwct[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:256]
+[ error ] [8]未定义数组索引: gu[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:258]
+[ error ] [8]未定义数组索引: gwct[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:256]
+[ error ] [8]未定义数组索引: gu[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:258]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:29+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/game_reports/favicon.ico
+[ log ] localhost/tigergame/public/index.php/admin/game_reports/favicon.ico [运行时间：0.032001s][吞吐率：31.25req/s] [内存消耗：1,714.07kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_reports',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:29+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:31+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/menu/index.html
+[ log ] localhost/tigergame/public/index.php/admin/menu/index.html [运行时间：0.185010s][吞吐率：5.41req/s] [内存消耗：2,863.48kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/game_reports/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->index[ D:\wamp\www\tigergame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\menu\index.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.024002s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` ORDER BY listorder asc  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Menu'  AND `a` = 'index' LIMIT 1     [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:31+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.021001s][吞吐率：47.62req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:33+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/admin/index.html
+[ log ] localhost/tigergame/public/index.php/admin/admin/index.html [运行时间：0.237013s][吞吐率：4.22req/s] [内存消耗：2,892.96kb] [文件加载：48]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/menu/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\AdminController->index[ D:\wamp\www\tigergame\application\admin\controller\AdminController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\admin\index.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admin` [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SELECT `t1`.* FROM `na_admin` `t1` LEFT JOIN `na_admin_group_access` `t2` ON `t1`.`id`=`t2`.`uid` GROUP BY t1.id ORDER BY t1.id desc  [ RunTime:0.022001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admin_group_access` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `na_admin_group_access` WHERE  `uid` = 1   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Admin'  AND `a` = 'index' LIMIT 1     [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:33+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/admin/favicon.ico
+[ log ] localhost/tigergame/public/index.php/admin/admin/favicon.ico [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,592.84kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:33+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:34+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/group/index.html
+[ log ] localhost/tigergame/public/index.php/admin/group/index.html [运行时间：0.173010s][吞吐率：5.78req/s] [内存消耗：2,848.27kb] [文件加载：47]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'group',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/admin/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GroupController->index[ D:\wamp\www\tigergame\application\admin\controller\GroupController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\group\index.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admin_group` [ RunTime:0.032001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_admin_group`  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Group'  AND `a` = 'index' LIMIT 1     [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:34+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/group/favicon.ico
+[ log ] localhost/tigergame/public/index.php/admin/group/favicon.ico [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：1,579.65kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'group',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:35+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:35+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/index/index.html
+[ log ] localhost/tigergame/public/index.php/admin/index/index.html [运行时间：0.098005s][吞吐率：10.20req/s] [内存消耗：2,569.47kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/group/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\tigergame\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\index\index.html [ array (
+  0 => 'msg',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.027002s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:36+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.041003s][吞吐率：24.39req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:39+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/merchant/userinfo.html
+[ log ] localhost/tigergame/public/index.php/admin/merchant/userinfo.html [运行时间：0.106006s][吞吐率：9.43req/s] [内存消耗：2,725.18kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'merchant',
+    2 => 'userinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MerchantController->userinfo[ D:\wamp\www\tigergame\application\admin\controller\MerchantController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\merchant\userinfo.html [ array (
+  0 => 'info',
+  1 => 'userinfos',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = '154' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:40+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:42+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/player/index.html
+[ log ] localhost/tigergame/public/index.php/admin/player/index.html [运行时间：0.130008s][吞吐率：7.69req/s] [内存消耗：2,869.67kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'player',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/merchant/userinfo.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\PlayerController->index[ D:\wamp\www\tigergame\application\admin\controller\PlayerController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\player\index.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'count',
+  4 => 'role',
+  5 => 'players',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_players` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_players` `p` INNER JOIN `na_users` `u` ON `p`.`parent`=`u`.`uid` WHERE  `p`.`parent` IN ('fdew32432df3','435435dfdsfg') LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT p.username pu,p.nickname pn,p.msn pm,p.balance pb,p.waterflow pw,p.createdAt pc,u.suffix us,u.username uu FROM `na_players` `p` INNER JOIN `na_users` `u` ON `p`.`parent`=`u`.`uid` WHERE  `p`.`parent` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_players` WHERE  `parent` IN ('fdew32432df3','435435dfdsfg') LIMIT 1     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '-1'  AND `suffix` <> 'Platform'    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  (  msn !='-1' and msn != '0' )  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '0'  AND `levelindex` <> '0'    [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Player'  AND `a` = 'index' LIMIT 1     [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:42+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:47+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/player_reports/index.html
+[ log ] localhost/tigergame/public/index.php/admin/player_reports/index.html [运行时间：0.140008s][吞吐率：7.14req/s] [内存消耗：2,866.72kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'player_reports',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/player/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\PlayerReportsController->index[ D:\wamp\www\tigergame\application\admin\controller\PlayerReportsController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\player_reports\index.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'role',
+  4 => 'players',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_player_reports` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_player_reports` `p` INNER JOIN `na_users` `u` ON `p`.`parent`=`u`.`uid` WHERE  `p`.`parent` IN ('fdew32432df3','435435dfdsfg') LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT p.username pu,p.wct pwct,p.msn pm,p.balance pb,p.waterflow pw,p.totalBetCount ptbc,p.avgRTP pa,p.totalPays ptp,p.totalBets ptb,u.suffix us,u.username uu FROM `na_player_reports` `p` INNER JOIN `na_users` `u` ON `p`.`parent`=`u`.`uid` WHERE  `p`.`parent` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '-1'  AND `suffix` <> 'Platform'    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  (  msn !='-1' and msn != '0' )  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '0'  AND `levelindex` <> '0'    [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.019002s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'PlayerReports'  AND `a` = 'index' LIMIT 1     [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:48+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.041003s][吞吐率：24.39req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:50+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/game_reports/index.html
+[ log ] localhost/tigergame/public/index.php/admin/game_reports/index.html [运行时间：0.143008s][吞吐率：6.99req/s] [内存消耗：2,831.61kb] [文件加载：48]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_reports',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/player_reports/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameReportsController->index[ D:\wamp\www\tigergame\application\admin\controller\GameReportsController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\game_reports\index.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'role',
+  4 => 'players',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_player_reports` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT SUM(totalBetCount) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalPays) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBets) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT `username` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT SUM(totalBetCount) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(totalPays) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBets) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username` FROM `na_users` WHERE  `uid` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '-1'  AND `suffix` <> 'Platform'    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  (  msn !='-1' and msn != '0' )  [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '0'  AND `levelindex` <> '0'    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'GameReports'  AND `a` = 'index' LIMIT 1     [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: gwct[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:256]
+[ error ] [8]未定义数组索引: gu[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:258]
+[ error ] [8]未定义数组索引: gwct[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:256]
+[ error ] [8]未定义数组索引: gu[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:258]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:49:51+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.030001s][吞吐率：33.33req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:53:50+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php
+[ log ] localhost/tigergame/public/index.php [运行时间：0.043003s][吞吐率：23.25req/s] [内存消耗：1,677.43kb] [文件加载：40]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\tigergame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\tigergame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\tigergame\application\admin\controller\LoginController.php:25]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:53:53+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/index/index.html
+[ log ] localhost/tigergame/public/index.php/admin/index/index.html [运行时间：0.120006s][吞吐率：8.33req/s] [内存消耗：2,569.45kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\tigergame\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\index\index.html [ array (
+  0 => 'msg',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.033002s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:53:53+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T11:53:55+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/game_reports/index.html
+[ log ] localhost/tigergame/public/index.php/admin/game_reports/index.html [运行时间：0.178010s][吞吐率：5.62req/s] [内存消耗：2,831.63kb] [文件加载：48]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_reports',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameReportsController->index[ D:\wamp\www\tigergame\application\admin\controller\GameReportsController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\game_reports\index.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'role',
+  4 => 'players',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_player_reports` [ RunTime:0.029002s ]
+[ sql ] [ SQL ] SELECT SUM(totalBetCount) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(totalPays) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBets) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.027002s ]
+[ sql ] [ SQL ] SELECT `username` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBetCount) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalPays) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBets) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `username` FROM `na_users` WHERE  `uid` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '-1'  AND `suffix` <> 'Platform'    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  (  msn !='-1' and msn != '0' )  [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '0'  AND `levelindex` <> '0'    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'GameReports'  AND `a` = 'index' LIMIT 1     [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: gwct[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:256]
+[ error ] [8]未定义数组索引: gu[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:258]
+[ error ] [8]未定义数组索引: gwct[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:256]
+[ error ] [8]未定义数组索引: gu[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:258]
+
+---------------------------------------------------------------
+[ 2017-09-11T11:53:55+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T12:06:01+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/game_reports/index.html
+[ log ] localhost/tigergame/public/index.php/admin/game_reports/index.html [运行时间：0.137008s][吞吐率：7.30req/s] [内存消耗：3,039.20kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_reports',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameReportsController->index[ D:\wamp\www\tigergame\application\admin\controller\GameReportsController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\game_reports\index.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'role',
+  4 => 'players',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_player_reports` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBetCount) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(totalPays) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBets) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `username` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBetCount) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalPays) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBets) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username` FROM `na_users` WHERE  `uid` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '-1'  AND `suffix` <> 'Platform'    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  (  msn !='-1' and msn != '0' )  [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '0'  AND `levelindex` <> '0'    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'GameReports'  AND `a` = 'index' LIMIT 1     [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: gwct[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:256]
+[ error ] [8]未定义数组索引: gu[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:258]
+[ error ] [8]未定义数组索引: gwct[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:256]
+[ error ] [8]未定义数组索引: gu[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:258]
+
+---------------------------------------------------------------
+[ 2017-09-11T12:06:01+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T15:33:52+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/player_reports/index.html
+[ log ] localhost/tigergame/public/index.php/admin/player_reports/index.html [运行时间：0.109006s][吞吐率：9.17req/s] [内存消耗：2,866.74kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'player_reports',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/game_reports/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\PlayerReportsController->index[ D:\wamp\www\tigergame\application\admin\controller\PlayerReportsController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\player_reports\index.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'role',
+  4 => 'players',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_player_reports` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_player_reports` `p` INNER JOIN `na_users` `u` ON `p`.`parent`=`u`.`uid` WHERE  `p`.`parent` IN ('fdew32432df3','435435dfdsfg') LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT p.username pu,p.wct pwct,p.msn pm,p.balance pb,p.waterflow pw,p.totalBetCount ptbc,p.avgRTP pa,p.totalPays ptp,p.totalBets ptb,u.suffix us,u.username uu FROM `na_player_reports` `p` INNER JOIN `na_users` `u` ON `p`.`parent`=`u`.`uid` WHERE  `p`.`parent` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '-1'  AND `suffix` <> 'Platform'    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  (  msn !='-1' and msn != '0' )  [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '0'  AND `levelindex` <> '0'    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'PlayerReports'  AND `a` = 'index' LIMIT 1     [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T15:33:53+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T16:37:30+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/game_reports/index.html
+[ log ] localhost/tigergame/public/index.php/admin/game_reports/index.html [运行时间：0.125008s][吞吐率：8.00req/s] [内存消耗：2,831.74kb] [文件加载：48]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_reports',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/player_reports/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameReportsController->index[ D:\wamp\www\tigergame\application\admin\controller\GameReportsController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\game_reports\index.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'role',
+  4 => 'players',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_player_reports` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT SUM(totalBetCount) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalPays) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBets) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `username` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBetCount) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalPays) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBets) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `username` FROM `na_users` WHERE  `uid` = '435435dfdsfg' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '-1'  AND `suffix` <> 'Platform'    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  (  msn !='-1' and msn != '0' )  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '0'  AND `levelindex` <> '0'    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'GameReports'  AND `a` = 'index' LIMIT 1     [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: gwct[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:256]
+[ error ] [8]未定义数组索引: gu[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:258]
+[ error ] [8]未定义数组索引: gwct[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:256]
+[ error ] [8]未定义数组索引: gu[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:258]
+
+---------------------------------------------------------------
+[ 2017-09-11T16:37:30+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T16:37:34+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/merchant/userinfo.html
+[ log ] localhost/tigergame/public/index.php/admin/merchant/userinfo.html [运行时间：0.154009s][吞吐率：6.49req/s] [内存消耗：2,725.16kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'merchant',
+    2 => 'userinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/game_reports/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MerchantController->userinfo[ D:\wamp\www\tigergame\application\admin\controller\MerchantController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\merchant\userinfo.html [ array (
+  0 => 'info',
+  1 => 'userinfos',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 1     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = '154' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T16:37:35+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T16:37:36+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/player/index.html
+[ log ] localhost/tigergame/public/index.php/admin/player/index.html [运行时间：0.150009s][吞吐率：6.67req/s] [内存消耗：2,869.67kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'player',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/merchant/userinfo.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\PlayerController->index[ D:\wamp\www\tigergame\application\admin\controller\PlayerController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\player\index.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'count',
+  4 => 'role',
+  5 => 'players',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_players` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_players` `p` INNER JOIN `na_users` `u` ON `p`.`parent`=`u`.`uid` WHERE  `p`.`parent` IN ('fdew32432df3','435435dfdsfg') LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT p.username pu,p.nickname pn,p.msn pm,p.balance pb,p.waterflow pw,p.createdAt pc,u.suffix us,u.username uu FROM `na_players` `p` INNER JOIN `na_users` `u` ON `p`.`parent`=`u`.`uid` WHERE  `p`.`parent` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_players` WHERE  `parent` IN ('fdew32432df3','435435dfdsfg') LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '-1'  AND `suffix` <> 'Platform'    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  (  msn !='-1' and msn != '0' )  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '0'  AND `levelindex` <> '0'    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Player'  AND `a` = 'index' LIMIT 1     [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T16:37:36+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.040002s][吞吐率：25.00req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T16:37:37+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/merchant/userinfo.html
+[ log ] localhost/tigergame/public/index.php/admin/merchant/userinfo.html [运行时间：0.131007s][吞吐率：7.63req/s] [内存消耗：2,725.18kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'merchant',
+    2 => 'userinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/player/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MerchantController->userinfo[ D:\wamp\www\tigergame\application\admin\controller\MerchantController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\merchant\userinfo.html [ array (
+  0 => 'info',
+  1 => 'userinfos',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 1     [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `uid` IN ('fdew32432df3','435435dfdsfg') LIMIT 0,20     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = '154' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T16:37:37+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.048003s][吞吐率：20.83req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T16:37:42+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/index/index.html
+[ log ] localhost/tigergame/public/index.php/admin/index/index.html [运行时间：0.062004s][吞吐率：16.13req/s] [内存消耗：2,569.57kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/merchant/userinfo.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\tigergame\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\index\index.html [ array (
+  0 => 'msg',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T16:37:42+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T16:37:44+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/index/index.html
+[ log ] localhost/tigergame/public/index.php/admin/index/index.html [运行时间：0.079005s][吞吐率：12.66req/s] [内存消耗：2,569.47kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\tigergame\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\index\index.html [ array (
+  0 => 'msg',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-11T16:37:44+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.042002s][吞吐率：23.81req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-11T16:59:02+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/index.php/admin/game_reports/index.html
+[ log ] localhost/tigergame/public/index.php/admin/game_reports/index.html [运行时间：0.154009s][吞吐率：6.49req/s] [内存消耗：2,831.66kb] [文件加载：48]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_reports',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/index.php/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameReportsController->index[ D:\wamp\www\tigergame\application\admin\controller\GameReportsController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\tigergame\public/../application/admin\view\game_reports\index.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'role',
+  4 => 'players',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\tigergame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_player_reports` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT SUM(totalBetCount) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(totalPays) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBets) AS tp_sum FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_player_reports` WHERE  `parent` = 'fdew32432df3' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_users` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `username` FROM `na_users` WHERE  `uid` = 'fdew32432df3' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBetCount) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(totalPays) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(totalBets) AS tp_sum FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_player_reports` WHERE  `parent` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username` FROM `na_users` WHERE  `uid` = '435435dfdsfg' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '-1'  AND `suffix` <> 'Platform'    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  (  msn !='-1' and msn != '0' )  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_users` WHERE  `msn` = '0'  AND `levelindex` <> '0'    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_tigergame;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'GameReports'  AND `a` = 'index' LIMIT 1     [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: gwct[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:256]
+[ error ] [8]未定义数组索引: gu[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:258]
+[ error ] [8]未定义数组索引: gwct[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:256]
+[ error ] [8]未定义数组索引: gu[D:\wamp\www\tigergame\runtime\temp\25e47de30d5ccfa6dbf31b55a9ac9448.php:258]
+
+---------------------------------------------------------------
+[ 2017-09-11T16:59:02+08:00 ] 127.0.0.1 127.0.0.1 GET /tigergame/public/static/artDialog/icons/loading.gif
+[ log ] localhost/tigergame/public/static/artDialog/icons/loading.gif [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,221.68kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\tigergame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/tigergame/public/static/artDialog/dialog.css',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=956455936; PHPSESSID=pl1dt1b1cu0a3ebnm347dovme6',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

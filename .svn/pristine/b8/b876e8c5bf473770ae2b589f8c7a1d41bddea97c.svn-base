@@ -1,0 +1,12 @@
+<?php
+namespace application\admin\controller;
+
+class GameSetController extends CommonController{
+    //
+    public function index(){
+
+        echo '敬请期待!';
+    }
+
+
+}

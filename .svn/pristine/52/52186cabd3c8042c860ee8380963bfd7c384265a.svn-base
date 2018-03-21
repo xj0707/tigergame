@@ -1,0 +1,374 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"D:\wamp\www\tigergame\public/../application/admin\view\game_set\xsxz.html";i:1506390406;s:66:"D:\wamp\www\tigergame\public/../application/admin\view\layout.html";i:1505964595;}*/ ?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta charset="utf-8" />
+        <title>后台管理</title>
+        <meta name="description" content="overview &amp; stats" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <!-- bootstrap & fontawesome -->
+        <link rel="stylesheet" href="__ROOT__/static/ace1.4/assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="__ROOT__/static/ace1.4/assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+        <!-- page specific plugin styles -->
+        <!-- text fonts -->
+        <link rel="stylesheet" href="__ROOT__/static/ace1.4/assets/css/fonts.googleapis.com.css" />
+        <!-- ace styles -->
+        <link rel="stylesheet" href="__ROOT__/static/ace1.4/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+        <!--[if lte IE 9]>
+                <link rel="stylesheet" href="__ROOT__/static/ace1.4/assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+        <![endif]-->
+        <link rel="stylesheet" href="__ROOT__/static/ace1.4/assets/css/ace-skins.min.css" />
+        <link rel="stylesheet" href="__ROOT__/static/ace1.4/assets/css/ace-rtl.min.css" />
+        <!--[if lte IE 9]>
+          <link rel="stylesheet" href="__ROOT__/static/ace1.4/assets/css/ace-ie.min.css" />
+        <![endif]-->
+        <!-- inline styles related to this page -->
+        <!-- ace settings handler -->
+        <script src="__ROOT__/static/ace1.4/assets/js/ace-extra.min.js"></script>
+        <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+        <!--[if lte IE 8]>
+        <script src="__ROOT__/static/ace1.4/assets/js/html5shiv.min.js"></script>
+        <script src="__ROOT__/static/ace1.4/assets/js/respond.min.js"></script>
+        <![endif]-->
+        <link rel="shortcut icon" type="image/x-icon" href="__ROOT__/favicon.ico" />
+        <style>
+            .top-20{
+                margin-top:20px;
+            }
+        </style>
+    </head>
+    <body class="no-skin">
+        <div id="navbar" class="navbar navbar-default ace-save-state">
+            <div class="navbar-container ace-save-state" id="navbar-container">
+                <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+                    <span class="sr-only">Toggle sidebar</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-header pull-left">
+                    <a href="<?php echo url('index/index'); ?>" class="navbar-brand">
+                        <small>
+                            <i class="fa fa-ra"></i>
+                            电子游戏后台管理
+                        </small>
+                    </a>
+                </div>
+                <div class="navbar-buttons navbar-header pull-right" role="navigation">
+                    <ul class="nav ace-nav">
+                        <li class="light-blue dropdown-modal">
+                            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                <img class="nav-user-photo" src="__ROOT__/static/ace1.4/assets/images/avatars/avatar2.png" alt="Jason's Photo" />
+                                <span class="user-info">
+                                    <small>Welcome,</small>
+                                    <?php echo session('tiger_username'); ?>
+                                </span>
+                                <i class="ace-icon fa fa-caret-down"></i>
+                            </a>
+                            <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                <!--<li>-->
+                                    <!--<a href="<?php echo url('admin/public_edit_info'); ?>">-->
+                                        <!--<i class="ace-icon fa fa-user"></i>-->
+                                        <!--个人设置-->
+                                    <!--</a>-->
+                                <!--</li>-->
+                                <!--<li class="divider"></li>-->
+                                <li>
+                                    <a href="<?php echo url('login/logout'); ?>">
+                                        <i class="ace-icon fa fa-power-off"></i>
+                                        退出
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- /.navbar-container -->
+        </div>
+
+        <div class="main-container ace-save-state" id="main-container">
+            <script type="text/javascript">
+                try {
+                    ace.settings.loadState('main-container')
+                } catch (e) {
+                }
+            </script>
+
+            <div id="sidebar" class="sidebar                  responsive                    ace-save-state">
+                <script type="text/javascript">
+                    try {
+                        ace.settings.loadState('sidebar')
+                    } catch (e) {
+                    }
+                </script>
+
+                <?php echo action('Menu/index','','widget'); ?>
+
+                <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+                    <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="main-content-inner">
+                    <div class="page-content">
+    <div class="col-sm-6 pull-right">
+        <span class="btn btn-sm btn-primary pull-right" onclick="javascript:window.history.back();">
+        上一页
+        <i class="icon-reply icon-only"></i>
+        </span>
+    </div>
+    <div class="page-header">
+        <h1>
+            线数线注设置
+            <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+                商户昵称：<?php echo $nickname; ?>
+            </small>
+        </h1>
+    </div>
+
+    <div>
+        <button type="button" class="btn btn-default" id="lt">罗塔之谜</button>
+        <button type="button" class="btn btn-default" id="cn">小厨娘</button>
+    </div>
+    <div style="margin-top: 20px;"></div>
+    <hr/>
+    <div id="itemluota" style="display: none;">
+        <div>
+            <div>
+                <label ><h4 style="color: blue;font-weight: bold;" id="label1">线数修改：</h4></label>
+            </div>
+            线数：<input type="text" name="xs" id="xs" value="<?php echo $xs; ?>" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" maxlength="2"/>
+            <button type="button" class="btn btn-default" id="btn1">确定修改</button>
+            <input type="hidden" name="uid"  id="uid" value="<?php echo $uid; ?>"/>
+            <input type="hidden" name="typeId"  id="typeId" value=""/>
+            <span class="help-block" id="info"></span>
+
+        </div>
+        <div style="margin-top: 20px;"></div>
+        <hr/>
+        <div>
+            <div>
+                <label ><h4 style="color: blue;font-weight: bold;" id="label2">线注修改：</h4></label>
+            </div>
+            <div>
+                <?php if(is_array($xzinit) || $xzinit instanceof \think\Collection): $i = 0; $__LIST__ = $xzinit;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="xz<?php echo $key; ?>" id="inlineCheckbox<?php echo $key; ?>" value="<?php echo $vo['v1']; ?>" <?php if($vo['istrue']==1): ?> checked="checked" <?php endif; ?>> <?php echo $vo['v1']; ?>
+                </label>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </div>
+            <div style="margin-top: 10px;">
+                <button type="button" class="btn btn-default" id="btn2">确定修改</button>
+                <span class="help-block" id="message"></span>
+            </div>
+
+        </div>
+        <div style="margin-top: 20px;"></div>
+        <hr/>
+
+    </div>
+
+
+</div>
+<!--[if !IE]> -->
+<script src="__ROOT__/static/ace1.4/assets/js/jquery-2.1.4.min.js"></script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script src="/static/ace1.4/assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+<script>
+
+    $(document).ready(function () {
+        $("#lt").on("click",function () {
+            $("#itemluota").css('display','block');
+            $("#label1").text('罗塔之谜线数修改');
+            $("#label2").text('罗塔之谜线注修改');
+            $("#typeId").val('40001');
+
+        })
+    });
+    $(document).ready(function () {
+        $("#cn").on("click",function () {
+            $("#itemluota").css('display','block');
+            $("#label1").text('小厨娘线数修改');
+            $("#label2").text('小厨娘线注修改');
+            $("#typeId").val('40002');
+        })
+    });
+    //线数
+    $(document).ready(function(){
+        $("#btn1").on("click",function(){
+           var  uid=$("#uid").val();
+           var  xs=$("#xs").val();
+           var  typeId=$("#typeId").val();
+           if(!xs){
+               alert('请输入线数');
+               return false;
+           }
+           if(!uid || !typeId){
+               alert('参数丢失');
+               return false;
+           }
+            //在与服务器通讯较慢时给用户提示信息
+            $("#info").html("<span style='color: red;'>操作进行中，请稍后...</span>");
+            //向服务器发送请求(get、post)
+            $.post("<?php echo url('doxs'); ?>",
+                {
+                    uid:uid,
+                    xs:xs
+                },
+                function(data){
+                    if(data.code==1){
+                        $("#info").html("<span style='color: green;'>"+data.message+"</span>");
+                    }else{
+                        $("#info").html("<span style='color: red;'>"+data.message+"</span>");
+                    }
+                });
+        })
+    })
+    //线注
+    $(document).ready(function(){
+        $("#btn2").on("click",function(){
+            var  uid=$("#uid").val();
+            var xzstr='';
+            var xzarr=$("input:checked");
+            xzarr.each(function (i,item) {
+                xzstr += xzarr[i].value+',';
+            });
+            if(xzarr.length<2){
+                alert('请至少选择两个！');
+                return false;
+            };
+            if(!uid){
+                alert('参数丢失，请重新进入');
+                return false;
+            }
+            //在与服务器通讯较慢时给用户提示信息
+            $("#message").html("<span style='color: red;'>操作进行中，请稍后...</span>");
+            //向服务器发送请求(get、post)
+            $.post("<?php echo url('doxz'); ?>",
+                {
+                    uid:uid,
+                    xz:xzstr.substring(0,xzstr.length-1)
+                },
+                function(data){
+                    if(data.code==1){
+                        $("#message").text(data.message);
+                    }else{
+                        $("#message").text(data.message);
+                    }
+                });
+        })
+    })
+
+</script>
+                </div>
+            </div><!-- /.main-content -->
+
+            <div class="footer">
+                <div class="footer-inner">
+                    <!--<div class="footer-content">-->
+                        <!--<span class="bigger-120">-->
+                            <!--&lt;!&ndash;<span class="blue bolder"><a href="#" >TP5Admin</a></span>&ndash;&gt;-->
+                             <!--&copy; 2016-2018-->
+                        <!--</span>-->
+
+                        <!--&nbsp; &nbsp;-->
+                        <!--&lt;!&ndash;<span class="action-buttons">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</a>&ndash;&gt;-->
+
+                            <!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</a>&ndash;&gt;-->
+
+                            <!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<i class="ace-icon fa fa-rss-square orange bigger-150"></i>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                    <!--</div>-->
+                </div>
+            </div>
+
+            <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+                <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+            </a>
+        </div><!-- /.main-container -->
+
+        <!-- basic scripts -->
+
+        <!--[if !IE]> -->
+        <script src="__ROOT__/static/ace1.4/assets/js/jquery-2.1.4.min.js"></script>
+
+        <!-- <![endif]-->
+
+        <!--[if IE]>
+<script src="__ROOT__/static/ace1.4/assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+        <script type="text/javascript">
+                    if ('ontouchstart' in document.documentElement)
+                        document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+        </script>
+        <script src="__ROOT__/static/ace1.4/assets/js/bootstrap.min.js"></script>
+
+        <!-- page specific plugin scripts -->
+
+        <!--[if lte IE 8]>
+          <script src="__ROOT__/static/ace1.4/assets/js/excanvas.min.js"></script>
+        <![endif]-->
+    
+
+        <!-- ace scripts -->
+        <script src="__ROOT__/static/ace1.4/assets/js/ace-elements.min.js"></script>
+        <script src="__ROOT__/static/ace1.4/assets/js/ace.min.js"></script>
+
+        <!-- inline scripts related to this page -->
+        <link rel="stylesheet" href="__ROOT__/static/artDialog/dialog.css" />
+        <script src="__ROOT__/static/artDialog/dialog.js"></script>
+        <!--artDialog end-->
+        
+        
+        <script>
+                    var u = $(".active").parent('ul');
+                    
+                    var uc = u.attr("class");//
+                   
+                    if (uc == 'submenu') {
+                       u.parent().attr("class", "open active");
+                       if(u.parent().parent().attr('class')=='submenu'){
+                           u.parent().parent().parent().attr("class","open active");
+                       }
+                    }
+
+                    //弹出图片
+                    function alert_img(url, width, heigth, title) {
+
+                        art.dialog({
+                            padding: 0,
+                            title: title,
+                            content: '<img src="' + url + '" width="' + width + '" height="' + heigth + '" />',
+                            lock: true
+                        });
+                    }
+                    //弹出确认操作
+                    function alert_del(url, title) {
+                        art.dialog({
+                            lock: true,
+                            background: '#300', // 背景色
+                            opacity: 0.87, // 透明度
+                            content: title,
+                            ok: function () {
+                                return window.location.href = url;
+                            },
+                            cancel: true
+                        });
+                    }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<?php
+namespace application\admin\controller;
+
+use think\Db;
+
+class MerchantController extends CommonController{
+    //商户信息
+    public function userinfo(){
+        $userIds=session('tiger_parentId');
+        if(count($userIds)){
+            $userinfos=Db::name('users')->where('uid','in',$userIds)->paginate(20);
+            $array=[];
+            foreach ($userinfos as $key=>$userinfo){
+                $uuid=$userinfo['parent'];
+                $info=Db::name('users')->field('username,nickname')->where('uid',$userinfo['parent'])->find();
+                $array[$key][$uuid]=$info['username'];
+            }
+            $this->assign('info',$array);
+            $this->assign('userinfos',$userinfos);
+            return $this->fetch();
+        }else{
+            $this->error('无任何商户信息！');
+        }
+    }
+
+}

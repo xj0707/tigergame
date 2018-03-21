@@ -1,0 +1,125 @@
+
+<link rel="stylesheet" href="__ROOT__/js/picker/jquery.datetimepicker.css">
+<script src="__ROOT__/js/jquery.js"></script>
+<script src="__ROOT__/js/picker/jquery.datetimepicker.js"></script>
+
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+        <span class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href='index.html';">
+            返回
+            <i class="icon-reply icon-only"></i>
+        </span>
+    </div>
+    <div class="page-header">
+        <h1>
+            <!-- {:model('menu')->getName()} {gt name="$Request.get.group_id" value="0"} [{:model('AdminGroup')->getGroupName($Request.get.group_id)}]{/gt}
+        	 <small>
+                <i class="ace-icon fa fa-angle-double-right"></i> -->
+          流水详情
+            <!--    </small>-->
+        </h1>
+    </div><!-- /.page-header -->
+
+    <div>
+
+        <form class="navbar-form navbar-left" >
+            <button style="margin-bottom: 10px;margin-right: 20px;" class="btn btn-default" type="button" id='but3'>7天数据</button>
+
+            <button style="margin-bottom: 10px;margin-right: 20px;" class="btn btn-default" type="button" id='but4'>30天数据</button>
+
+            <button style="margin-bottom: 10px;margin-right: 20px;" class="btn btn-default" type="button" id='but5'>所有数据</button>
+        </form>
+        <form class="form-inline" role="form" action="{:url('search')}" method="post" name="myfrom2">
+            <input type="hidden" name="userId" value="{$userId}"/>
+            <input type="hidden" name="name" value="{$name}"/>
+            <input type="hidden" name="nickname" value="{$nickname}"/>
+            <input type="hidden" name="typeId" value="{$typeId}"/>
+            自定义时间：
+            <div class="form-group" style="margin-bottom: 10px;">
+                <label class="sr-only" for="name">起始时间</label>
+                <input style="height: 42px;" type="text" class="form-control" id="name" name="create_time" placeholder="起始时间">
+            </div>
+            <div class="form-group" style="margin-bottom: 10px;">
+                <label class="sr-only" for="name1">结束时间</label>
+                <input style="height: 42px;" type="text" class="form-control" id="name1" name="e_time" placeholder="不填，默认为当前时间">
+            </div>
+            <button style="margin-bottom: 10px;" class="btn btn-default" type="button" id='but2'>搜一搜</button>
+        </form>
+
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <table id="simple-table" class="table  table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>用户ID</th>
+                            <th class="hidden-480">玩家账户</th>
+                            <!--<th class="hidden-480">玩家昵称</th>-->
+                            <!--<th class="hidden-480">方式</th>-->
+                            <th class="hidden-480">下注金额</th>
+                            <th class="hidden-480">输赢金额</th>
+                            <th class="hidden-480">
+                                <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+                                下注时间
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {volist name="$lists->data" id="vo"}
+                        <tr>
+                            <td>{$vo->gameUserId}</td>
+                            <td>{$name}</td>
+                            <!--<td>{$nickname}</td>-->
+                            <!--<td>{$vo->type|paystate}</td>-->
+                            <td>{$vo->bet}</td>
+                            <td>{$vo->winlose}</td>
+                            <td>{$vo->createdAt|micrtimehandle|date='Y-m-d H:i:s',###}</td>
+                        </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+                </div><!-- /.span -->
+            </div><!-- /.row -->
+                {$lists->render}
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div><!-- /.page-content -->
+
+
+<script type="text/javascript">
+    $("#but3").click(function(){
+        window.location.href='{:url("search","type=1&userId=$userId&name=$name&typeId=$typeId")}';
+    });
+    $("#but4").click(function(){
+        window.location.href='{:url("search","type=2&userId=$userId&name=$name&typeId=$typeId")}';
+    });
+    $("#but5").click(function(){
+        window.location.href='{:url("search","type=3&userId=$userId&name=$name&typeId=$typeId")}';
+    });
+    $("#but2").click(function(){
+        if($("input[name='create_time']").val()==''){
+            alert('起始时间不能为空');
+            $("input[name='create_time']").focus();
+        }else{
+            document.myfrom2.submit();
+        }
+    });
+    $('#name').datetimepicker({
+        dayOfWeekStart : 1,
+        lang:'ch',
+        startDate:	'2016/11/21 '
+    });
+    $('#name1').datetimepicker({
+        dayOfWeekStart : 1,
+        lang:'ch',
+        startDate:	'2016/11/21 '
+    });
+</script>
+

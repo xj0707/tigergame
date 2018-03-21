@@ -1,0 +1,346 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : localhost_3306
+Source Server Version : 50617
+Source Host           : localhost:3306
+Source Database       : na_tigergame
+
+Target Server Type    : MYSQL
+Target Server Version : 50617
+File Encoding         : 65001
+
+Date: 2017-08-31 17:28:42
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for na_admin
+-- ----------------------------
+DROP TABLE IF EXISTS `na_admin`;
+CREATE TABLE `na_admin` (
+  `id` mediumint(6) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL DEFAULT '',
+  `password` varchar(32) NOT NULL DEFAULT '',
+  `encrypt` varchar(6) NOT NULL DEFAULT '',
+  `lastloginip` int(10) NOT NULL DEFAULT '0',
+  `lastlogintime` int(10) unsigned NOT NULL DEFAULT '0',
+  `email` varchar(40) NOT NULL DEFAULT '',
+  `mobile` varchar(11) NOT NULL DEFAULT '',
+  `realname` varchar(50) NOT NULL DEFAULT '',
+  `openid` varchar(255) NOT NULL DEFAULT '',
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否有效(2:无效,1:有效)',
+  `updatetime` int(10) NOT NULL DEFAULT '0',
+  `uid` varchar(50) DEFAULT NULL COMMENT '平台管理员的uid ',
+  PRIMARY KEY (`id`),
+  KEY `username` (`username`),
+  KEY `status` (`status`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of na_admin
+-- ----------------------------
+INSERT INTO `na_admin` VALUES ('1', 'admin', '21232f297a57a5a743894a0e4a801fc3', '', '2130706433', '1503888645', '799137494@qq.com', '13076050636', '小肖', '', '1', '1502875535', null);
+
+-- ----------------------------
+-- Table structure for na_admin_group
+-- ----------------------------
+DROP TABLE IF EXISTS `na_admin_group`;
+CREATE TABLE `na_admin_group` (
+  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `description` text,
+  `rules` varchar(500) NOT NULL DEFAULT '' COMMENT '用户组拥有的规则id，多个规则 , 隔开',
+  `listorder` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `updatetime` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `listorder` (`listorder`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of na_admin_group
+-- ----------------------------
+INSERT INTO `na_admin_group` VALUES ('1', '系统首页', '拥有系统首页模块', '31', '0', '1503288249');
+INSERT INTO `na_admin_group` VALUES ('4', '商户管理', '拥有商户管理权限', '48,50,51,55,56,57,58,52', '0', '1503539486');
+INSERT INTO `na_admin_group` VALUES ('5', '报表统计', '拥有报表统计模块查看', '49,53,59,60,61,62,54,63,64,65,66', '0', '1503539502');
+
+-- ----------------------------
+-- Table structure for na_admin_group_access
+-- ----------------------------
+DROP TABLE IF EXISTS `na_admin_group_access`;
+CREATE TABLE `na_admin_group_access` (
+  `uid` int(10) unsigned NOT NULL COMMENT '用户id',
+  `group_id` mediumint(8) unsigned NOT NULL COMMENT '用户组id',
+  UNIQUE KEY `uid_group_id` (`uid`,`group_id`),
+  KEY `uid` (`uid`),
+  KEY `group_id` (`group_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of na_admin_group_access
+-- ----------------------------
+INSERT INTO `na_admin_group_access` VALUES ('20', '1');
+INSERT INTO `na_admin_group_access` VALUES ('21', '1');
+INSERT INTO `na_admin_group_access` VALUES ('22', '1');
+INSERT INTO `na_admin_group_access` VALUES ('23', '1');
+INSERT INTO `na_admin_group_access` VALUES ('24', '1');
+INSERT INTO `na_admin_group_access` VALUES ('25', '1');
+INSERT INTO `na_admin_group_access` VALUES ('26', '1');
+INSERT INTO `na_admin_group_access` VALUES ('20', '4');
+INSERT INTO `na_admin_group_access` VALUES ('21', '4');
+INSERT INTO `na_admin_group_access` VALUES ('22', '4');
+INSERT INTO `na_admin_group_access` VALUES ('23', '4');
+INSERT INTO `na_admin_group_access` VALUES ('24', '4');
+INSERT INTO `na_admin_group_access` VALUES ('25', '4');
+INSERT INTO `na_admin_group_access` VALUES ('26', '4');
+INSERT INTO `na_admin_group_access` VALUES ('20', '5');
+INSERT INTO `na_admin_group_access` VALUES ('21', '5');
+INSERT INTO `na_admin_group_access` VALUES ('22', '5');
+INSERT INTO `na_admin_group_access` VALUES ('23', '5');
+INSERT INTO `na_admin_group_access` VALUES ('24', '5');
+INSERT INTO `na_admin_group_access` VALUES ('25', '5');
+INSERT INTO `na_admin_group_access` VALUES ('26', '5');
+
+-- ----------------------------
+-- Table structure for na_admin_log
+-- ----------------------------
+DROP TABLE IF EXISTS `na_admin_log`;
+CREATE TABLE `na_admin_log` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `m` varchar(15) NOT NULL,
+  `c` varchar(20) NOT NULL,
+  `a` varchar(20) NOT NULL,
+  `querystring` varchar(255) NOT NULL,
+  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `username` varchar(20) NOT NULL,
+  `ip` int(10) NOT NULL,
+  `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of na_admin_log
+-- ----------------------------
+INSERT INTO `na_admin_log` VALUES ('1', 'admin', 'Menu', 'del', '?id=45', '1', 'admin', '2130706433', '2017-08-15 16:25:18');
+INSERT INTO `na_admin_log` VALUES ('2', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2017-08-15 16:27:00');
+INSERT INTO `na_admin_log` VALUES ('3', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2017-08-15 16:27:01');
+INSERT INTO `na_admin_log` VALUES ('4', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2017-08-15 16:30:54');
+INSERT INTO `na_admin_log` VALUES ('5', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2017-08-15 16:30:56');
+INSERT INTO `na_admin_log` VALUES ('6', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2017-08-15 16:30:57');
+INSERT INTO `na_admin_log` VALUES ('7', 'admin', 'Menu', 'info', '', '1', 'admin', '2130706433', '2017-08-15 16:31:36');
+INSERT INTO `na_admin_log` VALUES ('8', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2017-08-15 16:32:53');
+INSERT INTO `na_admin_log` VALUES ('9', 'admin', 'Player', 'index', '', '1', 'admin', '2130706433', '2017-08-15 16:34:22');
+INSERT INTO `na_admin_log` VALUES ('10', 'admin', 'Player', 'index', '', '1', 'admin', '2130706433', '2017-08-15 16:34:37');
+INSERT INTO `na_admin_log` VALUES ('11', 'admin', 'Player', 'favicon.ico', '', '1', 'admin', '2130706433', '2017-08-15 16:34:37');
+INSERT INTO `na_admin_log` VALUES ('12', 'admin', 'Player', 'index', '', '1', 'admin', '2130706433', '2017-08-15 16:35:09');
+INSERT INTO `na_admin_log` VALUES ('13', 'admin', 'Player', 'index', '', '1', 'admin', '2130706433', '2017-08-15 16:35:24');
+INSERT INTO `na_admin_log` VALUES ('14', 'admin', 'Index', 'favicon.ico', '', '1', 'admin', '2130706433', '2017-08-16 10:32:17');
+INSERT INTO `na_admin_log` VALUES ('15', 'admin', 'Player', 'index', '', '1', 'admin', '2130706433', '2017-08-16 11:33:24');
+INSERT INTO `na_admin_log` VALUES ('16', 'admin', 'Player', 'index', '', '1', 'admin', '2130706433', '2017-08-16 11:33:32');
+INSERT INTO `na_admin_log` VALUES ('17', 'admin', 'Player', 'favicon.ico', '', '1', 'admin', '2130706433', '2017-08-16 11:33:32');
+INSERT INTO `na_admin_log` VALUES ('18', 'admin', 'Player', 'index', '', '1', 'admin', '2130706433', '2017-08-16 11:33:51');
+INSERT INTO `na_admin_log` VALUES ('19', 'admin', 'Player', 'index', '', '1', 'admin', '2130706433', '2017-08-16 11:35:31');
+INSERT INTO `na_admin_log` VALUES ('20', 'admin', 'Player', 'index', '', '1', 'admin', '2130706433', '2017-08-16 11:35:46');
+INSERT INTO `na_admin_log` VALUES ('21', 'admin', 'Player', 'index', '', '1', 'admin', '2130706433', '2017-08-16 11:36:11');
+INSERT INTO `na_admin_log` VALUES ('22', 'admin', 'Player', 'index', '', '1', 'admin', '2130706433', '2017-08-16 11:37:30');
+INSERT INTO `na_admin_log` VALUES ('23', 'admin', 'Player', 'index', '', '1', 'admin', '2130706433', '2017-08-16 11:38:54');
+INSERT INTO `na_admin_log` VALUES ('24', 'admin', 'Player', 'index', '', '1', 'admin', '2130706433', '2017-08-16 11:46:38');
+INSERT INTO `na_admin_log` VALUES ('25', 'admin', 'Player', 'index', '', '1', 'admin', '2130706433', '2017-08-16 12:15:30');
+INSERT INTO `na_admin_log` VALUES ('26', 'admin', 'Player', 'index', '', '1', 'admin', '2130706433', '2017-08-16 12:19:14');
+INSERT INTO `na_admin_log` VALUES ('27', 'admin', 'Menu', 'favicon.ico', '', '1', 'admin', '2130706433', '2017-08-16 12:20:02');
+INSERT INTO `na_admin_log` VALUES ('28', 'admin', 'Menu', 'info', '', '1', 'admin', '2130706433', '2017-08-16 12:20:13');
+INSERT INTO `na_admin_log` VALUES ('29', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2017-08-16 12:21:20');
+INSERT INTO `na_admin_log` VALUES ('30', 'admin', 'GameReports', 'index', '', '1', 'admin', '2130706433', '2017-08-16 14:41:41');
+INSERT INTO `na_admin_log` VALUES ('31', 'admin', 'Log', 'favicon.ico', '', '1', 'admin', '2130706433', '2017-08-16 14:43:51');
+
+-- ----------------------------
+-- Table structure for na_game_reports
+-- ----------------------------
+DROP TABLE IF EXISTS `na_game_reports`;
+CREATE TABLE `na_game_reports` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `gameName` varchar(50) DEFAULT NULL COMMENT '游戏名称',
+  `updatedAt` int(11) DEFAULT NULL COMMENT '更新时间',
+  `totalPays` float DEFAULT NULL COMMENT '中奖金额',
+  `totalBets` float DEFAULT NULL COMMENT '投注金额',
+  `totalBetCount` int(11) DEFAULT NULL COMMENT '投注次数',
+  `totalPlayers` int(11) DEFAULT NULL COMMENT '投注用户数',
+  `avgRTP` float DEFAULT NULL,
+  `parent` varchar(36) DEFAULT NULL COMMENT '对应商户的uid',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of na_game_reports
+-- ----------------------------
+INSERT INTO `na_game_reports` VALUES ('1', 'aa', '0', '256', '12', '5232', '2321', '2323', 'shanghu_id2');
+INSERT INTO `na_game_reports` VALUES ('2', 'aa', '0', '1323', '43435', '12323', '4323', '23565', 'daili_id');
+
+-- ----------------------------
+-- Table structure for na_menu
+-- ----------------------------
+DROP TABLE IF EXISTS `na_menu`;
+CREATE TABLE `na_menu` (
+  `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
+  `name` char(40) NOT NULL DEFAULT '',
+  `parentid` smallint(6) DEFAULT '0',
+  `icon` varchar(20) NOT NULL DEFAULT '',
+  `c` varchar(20) DEFAULT NULL,
+  `a` varchar(20) DEFAULT NULL,
+  `data` varchar(50) NOT NULL DEFAULT '',
+  `tip` varchar(255) NOT NULL DEFAULT '' COMMENT '提示',
+  `group` varchar(50) DEFAULT '' COMMENT '分组',
+  `listorder` smallint(6) unsigned NOT NULL DEFAULT '999',
+  `display` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否显示(1:显示,2:不显示)',
+  `updatetime` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `listorder` (`listorder`),
+  KEY `parentid` (`parentid`)
+) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of na_menu
+-- ----------------------------
+INSERT INTO `na_menu` VALUES ('1', '管理设置', '0', 'fa-users', 'Admin', 'admin', '', '', '', '1', '1', '1476175413');
+INSERT INTO `na_menu` VALUES ('2', '管理员管理', '1', '', 'Admin', 'index', '', '', '', '0', '1', '1476175413');
+INSERT INTO `na_menu` VALUES ('3', '详情', '2', '', 'Admin', 'info', '', '', '', '0', '2', '1476175413');
+INSERT INTO `na_menu` VALUES ('4', '添加', '2', '', 'Admin', 'add', '', '', '', '0', '2', '1476175413');
+INSERT INTO `na_menu` VALUES ('5', '修改', '2', '', 'Admin', 'edit', '', '', '', '0', '2', '1476175413');
+INSERT INTO `na_menu` VALUES ('6', '删除', '2', '', 'Admin', 'del', '', '', '', '0', '2', '1476175413');
+INSERT INTO `na_menu` VALUES ('7', '权限管理', '1', '', 'Group', 'index', '', '', '', '0', '1', '1488781190');
+INSERT INTO `na_menu` VALUES ('8', '详情', '7', '', 'Group', 'info', '', '', '', '0', '2', '1476175413');
+INSERT INTO `na_menu` VALUES ('9', '添加', '7', '', 'Group', 'add', '', '', '', '0', '2', '1476175413');
+INSERT INTO `na_menu` VALUES ('10', '修改', '7', '', 'Group', 'edit', '', '', '', '0', '2', '1476175413');
+INSERT INTO `na_menu` VALUES ('11', '删除', '7', '', 'Group', 'del', '', '', '', '0', '2', '1476175413');
+INSERT INTO `na_menu` VALUES ('12', '菜单管理', '18', '', 'Menu', 'index', '', '', '', '0', '1', '1476175413');
+INSERT INTO `na_menu` VALUES ('13', '查看', '12', '', 'Menu', 'info', '', '', '', '0', '2', '1476175413');
+INSERT INTO `na_menu` VALUES ('14', '添加', '12', '', 'Menu', 'add', '', '', '', '0', '2', '1476175413');
+INSERT INTO `na_menu` VALUES ('15', '修改', '12', '', 'Menu', 'edit', '', '', '', '0', '2', '1476175413');
+INSERT INTO `na_menu` VALUES ('16', '删除', '12', '', 'Menu', 'del', '', '', '', '0', '2', '1476175413');
+INSERT INTO `na_menu` VALUES ('18', '系统设置', '0', 'fa-cogs', 'Menu', 'index', '', '', '', '2', '1', '1476175413');
+INSERT INTO `na_menu` VALUES ('22', '权限设置', '2', '', 'Group', 'rule', '', '', '', '999', '2', '1476175413');
+INSERT INTO `na_menu` VALUES ('23', '个人设置', '1', '', 'Admin', 'public_edit_info', '', '', '', '999', '2', '1502865964');
+INSERT INTO `na_menu` VALUES ('27', '日志管理', '18', '', 'Log', 'index', '', '', '', '999', '2', '1502865919');
+INSERT INTO `na_menu` VALUES ('31', '系统首页', '0', 'fa-bank', 'Index', 'index', '', '', '', '0', '1', '1476175413');
+INSERT INTO `na_menu` VALUES ('48', '商户管理', '0', 'fa-user-plus', 'Merchant', 'index', '', '', '', '999', '1', '1502867010');
+INSERT INTO `na_menu` VALUES ('49', '报表统计', '0', 'fa-area-chart', 'GameReports', 'index', '', '', '', '999', '1', '1502866845');
+INSERT INTO `na_menu` VALUES ('50', '商户信息', '48', '', 'Merchant', 'index', '', '', '', '999', '2', '1502874043');
+INSERT INTO `na_menu` VALUES ('51', '玩家信息', '48', '', 'Player', 'index', '', '', '', '999', '1', '1502867129');
+INSERT INTO `na_menu` VALUES ('52', '额度记录', '48', '', 'Limit', 'index', '', '', '', '999', '2', '1502874053');
+INSERT INTO `na_menu` VALUES ('53', '玩家报表', '49', '', 'PlayerReports', 'index', '', '', '', '999', '1', '1502866923');
+INSERT INTO `na_menu` VALUES ('54', '游戏报表', '49', '', 'GameReports', 'index', '', '', '', '999', '1', null);
+INSERT INTO `na_menu` VALUES ('55', '线路商查询', '51', '', 'Player', 'xl', '', '', '', '999', '2', '1503374844');
+INSERT INTO `na_menu` VALUES ('56', '商户查询', '51', '', 'Player', 'sh', '', '', '', '999', '2', '1503374863');
+INSERT INTO `na_menu` VALUES ('57', '玩家用户名查询', '51', '', 'Player', 'likeUsername', '', '', '', '999', '2', '1503374878');
+INSERT INTO `na_menu` VALUES ('58', '代理商查询', '51', '', 'Player', 'dl', '', '', '', '999', '2', '1503374893');
+INSERT INTO `na_menu` VALUES ('59', '线路商查询', '53', '', 'PlayerReports', 'xl', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('60', '商户查询', '53', '', 'PlayerReports', 'sh', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('61', '玩家用户名查询', '53', '', 'PlayerReports', 'likeUsername', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('62', '代理商查询', '53', '', 'PlayerReports', 'dl', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('63', '线路商查询', '54', '', 'GameReports', 'xl', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('64', '商户查询', '54', '', 'GameReports', 'sh', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('65', '代理商查询', '54', '', 'GameReports', 'dl', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('66', '游戏名称查询', '54', '', 'GameReports', 'likeGamename', '', '', '', '999', '2', null);
+
+-- ----------------------------
+-- Table structure for na_merchants
+-- ----------------------------
+DROP TABLE IF EXISTS `na_merchants`;
+CREATE TABLE `na_merchants` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) DEFAULT NULL,
+  `msn` varchar(255) DEFAULT NULL,
+  `displayName` varchar(255) DEFAULT NULL,
+  `userId` int(11) DEFAULT NULL,
+  `userStatus` varchar(255) DEFAULT NULL,
+  `createdAt` datetime DEFAULT NULL,
+  `updatedAt` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of na_merchants
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for na_players
+-- ----------------------------
+DROP TABLE IF EXISTS `na_players`;
+CREATE TABLE `na_players` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键自增长的ID',
+  `uid` varchar(36) DEFAULT NULL COMMENT '玩家的uid',
+  `parent` varchar(36) DEFAULT NULL COMMENT '所属商户的uid',
+  `username` varchar(50) DEFAULT NULL COMMENT '玩家账户',
+  `suffix` varchar(20) DEFAULT NULL COMMENT '玩家前缀',
+  `msn` varchar(5) DEFAULT NULL COMMENT '线路号',
+  `createdAt` datetime DEFAULT NULL COMMENT '创建时间',
+  `balance` float DEFAULT NULL COMMENT '玩家余额',
+  `waterflow` float DEFAULT NULL COMMENT '玩家流水总额',
+  `content` text COMMENT 'josn格式的数据',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of na_players
+-- ----------------------------
+INSERT INTO `na_players` VALUES ('1', '2343dsf', 'shanghu_id', 'player1', 'wanjia', '25', '0000-00-00 00:00:00', '1222', '12212', '{\'dfsd\':\'dsfsd\'}');
+INSERT INTO `na_players` VALUES ('2', 'fdsfe', 'daili_id', 'player2', 'wanjia', '0', '0000-00-00 00:00:00', '1222', '12212', '{\'dfsd\':\'dsfsd\'}');
+INSERT INTO `na_players` VALUES ('3', 'vcbfdg', 'shanghu_id2', 'player3', 'wanjia', '66', '0000-00-00 00:00:00', '1222', '12212', '{\'dfsd\':\'dsfsd\'}');
+INSERT INTO `na_players` VALUES ('4', 'bngf43', 'daili_id2', 'player4', 'wanjia', '0', '0000-00-00 00:00:00', '1222', '12212', '{\'dfsd\':\'dsfsd\'}');
+
+-- ----------------------------
+-- Table structure for na_player_reports
+-- ----------------------------
+DROP TABLE IF EXISTS `na_player_reports`;
+CREATE TABLE `na_player_reports` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) DEFAULT NULL COMMENT '玩家账户',
+  `totalBetCount` int(11) DEFAULT NULL COMMENT '投注次数',
+  `avgRTP` float DEFAULT NULL,
+  `totalPays` float DEFAULT NULL COMMENT '中奖金额',
+  `totalBets` float DEFAULT NULL COMMENT '投注金额',
+  `balance` float DEFAULT NULL COMMENT '玩家余额',
+  `waterflow` float DEFAULT NULL COMMENT '流水总额',
+  `msn` varchar(5) DEFAULT NULL,
+  `parent` varchar(36) DEFAULT NULL COMMENT '对应商户的uid',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of na_player_reports
+-- ----------------------------
+INSERT INTO `na_player_reports` VALUES ('1', 'player1', '100', '20', '1000', '1500', '500', '1000', '25', 'shanghu_id');
+INSERT INTO `na_player_reports` VALUES ('2', 'player2', '2300', '56', '2155', '6568', '566', '65644', '0', 'daili_id');
+INSERT INTO `na_player_reports` VALUES ('3', 'player3', '46561', '565', '563', '53232', '323', '323', '66', 'shanghu_id2');
+INSERT INTO `na_player_reports` VALUES ('4', 'player4', '4564', '464', '3212', '484634', '13', '131', '0', 'daili_id2');
+
+-- ----------------------------
+-- Table structure for na_users
+-- ----------------------------
+DROP TABLE IF EXISTS `na_users`;
+CREATE TABLE `na_users` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `uid` varchar(36) DEFAULT NULL COMMENT '管理员，线路商，商户，代理，的ID',
+  `parent` varchar(36) DEFAULT NULL COMMENT '上级用户uid',
+  `ancestor` varchar(36) DEFAULT NULL COMMENT '根用户uid',
+  `username` varchar(50) DEFAULT NULL COMMENT '用户账号',
+  `suffix` varchar(10) DEFAULT NULL COMMENT '当前用户前缀',
+  `msn` varchar(5) DEFAULT NULL COMMENT '当前用户线路号',
+  `content` text COMMENT 'json格式数据',
+  `createdAt` int(11) DEFAULT NULL COMMENT '创建时间',
+  `updatedAt` int(11) DEFAULT NULL COMMENT '更新时间',
+  `levelindex` varchar(1800) DEFAULT NULL COMMENT '层级关系所属',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of na_users
+-- ----------------------------
+INSERT INTO `na_users` VALUES ('20', 'admin_id', 'parent', 'ancestor', null, 'Platform', null, '{\'sdf\':\'dfds\'}', '0', null, '0');
+INSERT INTO `na_users` VALUES ('21', 'xianlu_id', '', '', null, 'xianlu', null, '{\'sdf\':\'dfds\'}', '0', null, '01');
+INSERT INTO `na_users` VALUES ('22', 'shanghu_id', 'xianlu_id', 'xianlu_id', null, 'shanghu', '25', '{\'sdf\':\'dfds\'}', '0', null, '01,xianlu_id');
+INSERT INTO `na_users` VALUES ('23', 'daili_id', '', '', null, 'Agent', '0', '{\'sdf\':\'dfds\'}', '0', null, '0');
+INSERT INTO `na_users` VALUES ('24', 'xianlu_id2', 'xianlu_id', 'xianlu_id', null, 'xianlu2', null, '{\'sdf\':\'dfds\'}', '0', null, '01,xianlu_id');
+INSERT INTO `na_users` VALUES ('25', 'shanghu_id2', 'xianlu_id2', 'xianlu_id', null, 'shanghu2', '66', '{\'sdf\':\'dfds\'}', '0', null, '01,xianlu_id,xianlu_id2');
+INSERT INTO `na_users` VALUES ('26', 'daili_id2', 'daili_id', 'daili_id', null, 'daili2', '0', '{\'sdf\':\'dfds\'}', '0', null, '01,daili_id');
